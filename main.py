@@ -1,23 +1,50 @@
 import json
+import logging
 
 import requests
 from fastapi import FastAPI, HTTPException
+from contextlib import asynccontextmanager
 
 from models import BuildingData, HealthResponse, ScheduleResponse
+from llm import SYSTEM_PROMPT, build_schedule_prompt
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+OLLAMA_URL = "http://localhost:11434/api/generate"
+MODEL_NAME = "qwen2.5:7b"
+
+
+# --------------------------------------------------------------------------- #
+# Startup — warm up the model so it's in VRAM before the first real request
+# --------------------------------------------------------------------------- #
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logger.info("Warming up model '%s' — this may take a minute on first run...", MODEL_NAME)
+    try:
+        requests.post(
+            OLLAMA_URL,
+            json={
+                "model": MODEL_NAME,
+                "prompt": "Привет",
+                "stream": False,
+                "options": {"num_predict": 1},  # generate just 1 token — fast
+            },
+            timeout=300,
+        )
+        logger.info("Model is loaded and ready.")
+    except Exception as exc:
+        logger.warning("Could not pre-warm model: %s. First request may be slow.", exc)
+    yield  # server runs here
+
 
 app = FastAPI(
     title="Construction Schedule AI API",
     description="RAG-LLM service for automated calendar planning in construction projects",
     version="0.1.0",
+    lifespan=lifespan,
 )
-
-OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL_NAME = "qwen2.5:7b"
-SYSTEM_PROMPT = """Ты — эксперт по календарному планированию строительных проектов.
-Ты помогаешь составлять календарные планы на основе данных о здании.
-Всегда отвечай только на русском языке.
-Когда тебя просят составить календарный план, возвращай ответ строго в формате JSON.
-"""
 
 
 # --------------------------------------------------------------------------- #
@@ -31,9 +58,13 @@ def call_ollama(prompt: str, system: str = SYSTEM_PROMPT) -> str:
         "system": system,
         "prompt": prompt,
         "stream": False,
+        "options": {
+            "num_ctx": 8192,      # increased from default 4096
+            "temperature": 0.3,   # lower = more deterministic JSON output
+        },
     }
     try:
-        response = requests.post(OLLAMA_URL, json=payload, timeout=120)
+        response = requests.post(OLLAMA_URL, json=payload, timeout=300)
         response.raise_for_status()
         return response.json()["response"]
     except requests.exceptions.ConnectionError:
@@ -46,47 +77,17 @@ def call_ollama(prompt: str, system: str = SYSTEM_PROMPT) -> str:
             status_code=504,
             detail="Ollama took too long to respond. Try a shorter prompt or restart Ollama.",
         )
-
-
-def build_schedule_prompt(building: BuildingData) -> str:
-    """Convert BuildingData into a detailed Russian prompt for the LLM."""
-    if building.elements:
-        lines = [
-            f"  - {el.count}x {el.type} ({el.material}, объём: {el.volume} м³)"
-            for el in building.elements
-        ]
-        elements_text = "Элементы здания:\n" + "\n".join(lines)
-    else:
-        elements_text = "Элементы здания: данные не предоставлены."
-
-    return f"""Составь календарный план строительства следующего объекта.
-
-Название проекта: {building.name}
-Тип здания: {building.building_type}
-Количество этажей: {building.floors}
-Общая площадь: {building.total_area} м²
-{elements_text}
-Дополнительные заметки: {building.notes or 'нет'}
-
-Верни ответ ТОЛЬКО в формате JSON без дополнительного текста, строго по следующей схеме:
-{{
-  "project_name": "...",
-  "total_duration_days": <число>,
-  "tasks": [
-    {{
-      "task_name": "...",
-      "duration_days": <число>,
-      "depends_on": ["..."],
-      "workers_required": <число>,
-      "description": "..."
-    }}
-  ],
-  "notes": "..."
-}}
-
-Задачи должны идти в логическом строительном порядке (фундамент → стены → перекрытия → кровля → отделка → инженерные сети).
-"""
-
+    except requests.exceptions.HTTPError as exc:
+        status = exc.response.status_code
+        if status == 502:
+            raise HTTPException(
+                status_code=503,
+                detail="Ollama is still loading the model into VRAM. Wait a few seconds and try again.",
+            )
+        raise HTTPException(
+            status_code=502,
+            detail=f"Ollama returned an unexpected error: {status}.",
+        )
 
 def parse_llm_json(raw: str) -> dict:
     """Strip markdown fences if present, then parse JSON."""
@@ -109,11 +110,21 @@ def parse_llm_json(raw: str) -> dict:
 
 @app.get("/health", response_model=HealthResponse)
 def health_check() -> HealthResponse:
-    """Check whether the API and Ollama are reachable."""
+    """Check whether the API and Ollama are reachable and the model is loaded."""
     try:
-        requests.get("http://localhost:11434", timeout=3)
-        ollama_ok = True
-    except requests.exceptions.ConnectionError:
+        # Hit /api/generate with 0 tokens — confirms model is actually in VRAM
+        resp = requests.post(
+            OLLAMA_URL,
+            json={
+                "model": MODEL_NAME,
+                "prompt": "",
+                "stream": False,
+                "options": {"num_predict": 0},
+            },
+            timeout=10,
+        )
+        ollama_ok = resp.status_code == 200
+    except requests.exceptions.RequestException:
         ollama_ok = False
 
     return HealthResponse(
