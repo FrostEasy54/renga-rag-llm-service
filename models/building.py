@@ -2,17 +2,17 @@ from pydantic import BaseModel
  
  
 class BuildingElement(BaseModel):
-    type: str        # e.g. "wall", "slab", "column"
-    material: str    # e.g. "concrete", "brick"
-    volume: float    # in cubic metres
+    type: str
+    material: str
+    volume: float
     count: int = 1
  
  
 class BuildingData(BaseModel):
-    name: str                               # project / building name
-    building_type: str                      # e.g. "residential", "commercial"
+    name: str
+    building_type: str
     floors: int
-    total_area: float                       # m²
+    total_area: float
     elements: list[BuildingElement] = []
-    notes: str = ""                         # any extra info from the plugin
+    notes: str = ""
  
