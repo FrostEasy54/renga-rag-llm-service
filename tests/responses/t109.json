@@ -1,0 +1,109 @@
+{
+  "project_name": "14-этажный бизнес-центр",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 20,
+      "depends_on": [],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Строительство стен (железобетон)",
+      "duration_days": 60,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 25,
+      "work_shifts": 3,
+      "description": "Устройство железобетонных стен"
+    },
+    {
+      "task_name": "Строительство стен (стекло)",
+      "duration_days": 10,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство стеклянных стен"
+    },
+    {
+      "task_name": "Строительство колонн (железобетон)",
+      "duration_days": 10,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных колонн"
+    },
+    {
+      "task_name": "Строительство балок (сталь)",
+      "duration_days": 10,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство стальных балок"
+    },
+    {
+      "task_name": "Строительство перекрытий (железобетон)",
+      "duration_days": 10,
+      "depends_on": [
+        "Строительство стен (железобетон)",
+        "Строительство колонн (железобетон)"
+      ],
+      "workers_required": 25,
+      "work_shifts": 3,
+      "description": "Устройство железобетонных перекрытий"
+    },
+    {
+      "task_name": "Крепление окон (алюминий)",
+      "duration_days": 10,
+      "depends_on": [
+        "Строительство стен (стекло)"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка алюминиевых окон"
+    },
+    {
+      "task_name": "Крепление дверей (стекло)",
+      "duration_days": 10,
+      "depends_on": [
+        "Строительство стен (стекло)"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка стеклянных дверей"
+    },
+    {
+      "task_name": "Крепление лестниц (железобетон)",
+      "duration_days": 10,
+      "depends_on": [
+        "Строительство стен (железобетон)",
+        "Строительство перекрытий (железобетон)"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных лестниц"
+    },
+    {
+      "task_name": "Крепление крыши (металл)",
+      "duration_days": 10,
+      "depends_on": [
+        "Строительство перекрытий (железобетон)",
+        "Крепление лестниц (железобетон)"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство металлической крыши"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2230.",
+  "rag_context_used": false
+}

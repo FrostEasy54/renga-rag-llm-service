@@ -1,0 +1,217 @@
+{
+  "project_name": "Двухэтажный жилой дом из газобетона",
+  "total_duration_days": 10,
+  "tasks": [
+    {
+      "task_name": "Подготовка и ограждение строительной площадки",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Подготовка земельного участка, установка забора"
+    },
+    {
+      "task_name": "Устройство временных сооружений и подключение коммуникаций",
+      "duration_days": 1,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка временных туалетов, подключение электричества"
+    },
+    {
+      "task_name": "Геодезическая разбивка осей здания",
+      "duration_days": 1,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 2,
+      "work_shifts": 2,
+      "description": "Разметка осей и установка опор"
+    },
+    {
+      "task_name": "Земляные работы (разработка котлована)",
+      "duration_days": 1,
+      "depends_on": [
+        "Устройство временных сооружений и подключение коммуникаций"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Разработка котлована для фундамента"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 1,
+      "depends_on": [
+        "Земляные работы (разработка котлована)"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Возведение железобетонного фундамента"
+    },
+    {
+      "task_name": "Гидроизоляция фундамента и обратная засыпка",
+      "duration_days": 1,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Гидроизоляция фундамента и обратная засыпка"
+    },
+    {
+      "task_name": "Возведение стен 1-го этажа",
+      "duration_days": 3,
+      "depends_on": [
+        "Гидроизоляция фундамента и обратная засыпка"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение газобетонных стен на первом этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 1-го этажа",
+      "duration_days": 1,
+      "depends_on": [
+        "Возведение стен 1-го этажа"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных перекрытий на первом этаже"
+    },
+    {
+      "task_name": "Возведение стен 2-го этажа",
+      "duration_days": 3,
+      "depends_on": [
+        "Устройство перекрытия 1-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение газобетонных стен на втором этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 2-го этажа",
+      "duration_days": 1,
+      "depends_on": [
+        "Возведение стен 2-го этажа"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных перекрытий на втором этаже"
+    },
+    {
+      "task_name": "Кровельные работы",
+      "duration_days": 1,
+      "depends_on": [
+        "Устройство перекрытия 2-го этажа"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка кровли и утепление"
+    },
+    {
+      "task_name": "Монтаж оконных блоков",
+      "duration_days": 1,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка ПВХ-окон на всех этажах"
+    },
+    {
+      "task_name": "Монтаж дверных блоков",
+      "duration_days": 1,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка ПВХ-дверей на всех этажах"
+    },
+    {
+      "task_name": "Штукатурные работы",
+      "duration_days": 1,
+      "depends_on": [
+        "Монтаж оконных блоков",
+        "Монтаж дверных блоков"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Штукатурка внутренних стен"
+    },
+    {
+      "task_name": "Прокладка инженерных сетей",
+      "duration_days": 1,
+      "depends_on": [
+        "Штукатурные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Прокладка водопровода, канализации и электрики"
+    },
+    {
+      "task_name": "Установка радиаторов",
+      "duration_days": 1,
+      "depends_on": [
+        "Прокладка инженерных сетей"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка отопительного оборудования"
+    },
+    {
+      "task_name": "Малярные и обойные работы",
+      "duration_days": 1,
+      "depends_on": [
+        "Штукатурные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Покраска стен, наклейка обоев"
+    },
+    {
+      "task_name": "Установка сантехнических приборов",
+      "duration_days": 1,
+      "depends_on": [
+        "Прокладка инженерных сетей"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка кранов, смесителей и душевых"
+    },
+    {
+      "task_name": "Установка светильников",
+      "duration_days": 1,
+      "depends_on": [
+        "Малярные и обойные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка люстр, настенных ламп"
+    },
+    {
+      "task_name": "Отделка фасада",
+      "duration_days": 1,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Утепление и облицовка внешних стен"
+    },
+    {
+      "task_name": "Благоустройство территории",
+      "duration_days": 1,
+      "depends_on": [
+        "Отделка фасада"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка дорожек, озеленение"
+    }
+  ],
+  "notes": "Общая продолжительность строительства составляет 10 дней. Пиковое число рабочих: 6 человек.",
+  "rag_context_used": true
+}

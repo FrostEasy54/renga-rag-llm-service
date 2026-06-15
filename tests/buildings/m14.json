@@ -1,0 +1,63 @@
+{
+  "name": "17-этажный жилой комплекс",
+  "building_type": "residential",
+  "floors": 17,
+  "total_area": 22000.0,
+  "elements": [
+    {
+      "type": "foundation",
+      "material": "Железобетон",
+      "volume": 1800.0,
+      "count": 1
+    },
+    {
+      "type": "wall",
+      "material": "Железобетон",
+      "volume": 2040.0,
+      "count": 595
+    },
+    {
+      "type": "wall",
+      "material": "Кирпич",
+      "volume": 380.0,
+      "count": 220
+    },
+    {
+      "type": "column",
+      "material": "Железобетон",
+      "volume": 145.0,
+      "count": 204
+    },
+    {
+      "type": "slab",
+      "material": "Железобетон",
+      "volume": 4400.0,
+      "count": 18
+    },
+    {
+      "type": "roof",
+      "material": "Бетон",
+      "volume": 75.0,
+      "count": 1
+    },
+    {
+      "type": "window",
+      "material": "ПВХ",
+      "volume": 0.0,
+      "count": 540
+    },
+    {
+      "type": "door",
+      "material": "Металл",
+      "volume": 0.0,
+      "count": 480
+    },
+    {
+      "type": "stair",
+      "material": "Железобетон",
+      "volume": 130.0,
+      "count": 8
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2267."
+}

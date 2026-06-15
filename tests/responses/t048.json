@@ -1,0 +1,99 @@
+{
+  "project_name": "5-этажный кирпичный МКД",
+  "total_duration_days": 180,
+  "tasks": [
+    {
+      "task_name": "Фундамент",
+      "duration_days": 20,
+      "depends_on": [],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Стены",
+      "duration_days": 60,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 40,
+      "work_shifts": 2,
+      "description": "Устройство кирпичных стен"
+    },
+    {
+      "task_name": "Столбы",
+      "duration_days": 15,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных столбов"
+    },
+    {
+      "task_name": "Плоскости перекрытий",
+      "duration_days": 30,
+      "depends_on": [
+        "Стены",
+        "Столбы"
+      ],
+      "workers_required": 20,
+      "work_shifts": 2,
+      "description": "Устройство бетонных плоскостей перекрытий"
+    },
+    {
+      "task_name": "Лестницы",
+      "duration_days": 15,
+      "depends_on": [
+        "Плоскости перекрытий"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных лестниц"
+    },
+    {
+      "task_name": "Кровля",
+      "duration_days": 10,
+      "depends_on": [
+        "Плоскости перекрытий",
+        "Лестницы"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство бетонной кровли"
+    },
+    {
+      "task_name": "Оконные проемы",
+      "duration_days": 10,
+      "depends_on": [
+        "Кровля"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка ПВХ окон"
+    },
+    {
+      "task_name": "Дверные проемы",
+      "duration_days": 10,
+      "depends_on": [
+        "Кровля"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Оконные проемы",
+        "Дверные проемы"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Проведение финальных работ и проверка готовности объекта"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 218.",
+  "rag_context_used": false
+}

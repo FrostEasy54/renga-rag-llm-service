@@ -1,0 +1,76 @@
+{
+  "project_name": "Дачный одноэтажный дом",
+  "total_duration_days": 45,
+  "tasks": [
+    {
+      "task_name": "Предварительные работы и разработка проекта",
+      "duration_days": 7,
+      "depends_on": [],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Определение участка, разработка проекта, согласование"
+    },
+    {
+      "task_name": "Построение фундамента",
+      "duration_days": 5,
+      "depends_on": [
+        "Предварительные работы и разработка проекта"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Бетонирование фундамента"
+    },
+    {
+      "task_name": "Установка стен",
+      "duration_days": 8,
+      "depends_on": [
+        "Построение фундамента"
+      ],
+      "workers_required": 6,
+      "work_shifts": 1,
+      "description": "Установка бруса для стен"
+    },
+    {
+      "task_name": "Создание пола",
+      "duration_days": 3,
+      "depends_on": [
+        "Установка стен"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Укладка деревянного пола"
+    },
+    {
+      "task_name": "Создание крыши",
+      "duration_days": 5,
+      "depends_on": [
+        "Создание пола"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Укладка деревянной крыши"
+    },
+    {
+      "task_name": "Установка окон и дверей",
+      "duration_days": 2,
+      "depends_on": [
+        "Создание крыши"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка ПВХ-окон и деревянных дверей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Установка окон и дверей"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Отделка, уборка, проверка качества"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 29.",
+  "rag_context_used": false
+}

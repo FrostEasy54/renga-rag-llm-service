@@ -1,0 +1,99 @@
+{
+  "project_name": "Одноэтажный гаражный комплекс",
+  "total_duration_days": 60,
+  "tasks": [
+    {
+      "task_name": "Подготовка к строительству",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Очистка участка, разметка, подготовка материалов"
+    },
+    {
+      "task_name": "Возведение фундамента",
+      "duration_days": 7,
+      "depends_on": [
+        "Подготовка к строительству"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного основания"
+    },
+    {
+      "task_name": "Возведение стен",
+      "duration_days": 14,
+      "depends_on": [
+        "Возведение фундамента"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных стен"
+    },
+    {
+      "task_name": "Установка колонн",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение фундамента"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Установка железобетонных колонн"
+    },
+    {
+      "task_name": "Устройство пола",
+      "duration_days": 7,
+      "depends_on": [
+        "Возведение стен",
+        "Установка колонн"
+      ],
+      "workers_required": 6,
+      "work_shifts": 1,
+      "description": "Устройство железобетонного пола"
+    },
+    {
+      "task_name": "Крепление крыши",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение стен",
+        "Установка колонн"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Монтаж металлочерепицы"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 3,
+      "depends_on": [
+        "Крепление крыши"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 3,
+      "depends_on": [
+        "Крепление крыши"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка металлических окон"
+    },
+    {
+      "task_name": "Завершающие работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Установка дверей",
+        "Установка окон"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Очистка территории, уборка"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 35.",
+  "rag_context_used": false
+}

@@ -1,0 +1,112 @@
+{
+  "project_name": "Двухэтажный жилой дом из газобетона",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Фундамент",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 4,
+      "work_shifts": 8,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Стены",
+      "duration_days": 10,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 6,
+      "work_shifts": 8,
+      "description": "Устройство стен из газобетона"
+    },
+    {
+      "task_name": "Плоские полы",
+      "duration_days": 7,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 3,
+      "work_shifts": 8,
+      "description": "Устройство железобетонных плоских полов"
+    },
+    {
+      "task_name": "Полы на втором этаже",
+      "duration_days": 7,
+      "depends_on": [
+        "Стены"
+      ],
+      "workers_required": 3,
+      "work_shifts": 8,
+      "description": "Устройство железобетонных полов на втором этаже"
+    },
+    {
+      "task_name": "Крыша",
+      "duration_days": 5,
+      "depends_on": [
+        "Стены",
+        "Плоские полы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 8,
+      "description": "Устройство деревянной крыши"
+    },
+    {
+      "task_name": "Лестница",
+      "duration_days": 3,
+      "depends_on": [
+        "Стены",
+        "Плоские полы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 8,
+      "description": "Устройство железобетонной лестницы"
+    },
+    {
+      "task_name": "Окна",
+      "duration_days": 4,
+      "depends_on": [
+        "Стены"
+      ],
+      "workers_required": 2,
+      "work_shifts": 8,
+      "description": "Установка пластиковых окон"
+    },
+    {
+      "task_name": "Двери",
+      "duration_days": 3,
+      "depends_on": [
+        "Стены",
+        "Лестница"
+      ],
+      "workers_required": 2,
+      "work_shifts": 8,
+      "description": "Установка пластиковых дверей"
+    },
+    {
+      "task_name": "Внутренняя отделка",
+      "duration_days": 10,
+      "depends_on": [
+        "Крыша",
+        "Лестница",
+        "Окна",
+        "Двери"
+      ],
+      "workers_required": 5,
+      "work_shifts": 8,
+      "description": "Внутренняя отделка помещения"
+    },
+    {
+      "task_name": "Проверка и завершение",
+      "duration_days": 2,
+      "depends_on": [
+        "Внутренняя отделка"
+      ],
+      "workers_required": 3,
+      "work_shifts": 8,
+      "description": "Проверка готовности здания и завершающие работы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 102.",
+  "rag_context_used": false
+}

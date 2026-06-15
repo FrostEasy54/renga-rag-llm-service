@@ -1,0 +1,51 @@
+{
+  "name": "Двухэтажный кирпичный коттедж",
+  "building_type": "residential",
+  "floors": 2,
+  "total_area": 180.0,
+  "elements": [
+    {
+      "type": "foundation",
+      "material": "Железобетон",
+      "volume": 19.0,
+      "count": 1
+    },
+    {
+      "type": "wall",
+      "material": "Кирпич",
+      "volume": 112.0,
+      "count": 60
+    },
+    {
+      "type": "slab",
+      "material": "Железобетон",
+      "volume": 36.0,
+      "count": 3
+    },
+    {
+      "type": "roof",
+      "material": "Дерево",
+      "volume": 10.0,
+      "count": 1
+    },
+    {
+      "type": "window",
+      "material": "ПВХ",
+      "volume": 0.0,
+      "count": 14
+    },
+    {
+      "type": "door",
+      "material": "Дерево",
+      "volume": 0.0,
+      "count": 7
+    },
+    {
+      "type": "stair",
+      "material": "Железобетон",
+      "volume": 1.2,
+      "count": 1
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 87."
+}

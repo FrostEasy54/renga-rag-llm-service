@@ -1,0 +1,87 @@
+{
+  "project_name": "16-этажный монолитный МКД",
+  "total_duration_days": 300,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 25,
+      "depends_on": [],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Строительство стен",
+      "duration_days": 70,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных и газобетонных стен"
+    },
+    {
+      "task_name": "Монтаж колонн",
+      "duration_days": 15,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Установка железобетонных колонн"
+    },
+    {
+      "task_name": "Монтаж перекрытий",
+      "duration_days": 35,
+      "depends_on": [
+        "Строительство стен",
+        "Монтаж колонн"
+      ],
+      "workers_required": 20,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных перекрытий"
+    },
+    {
+      "task_name": "Кладка кровли",
+      "duration_days": 15,
+      "depends_on": [
+        "Монтаж перекрытий"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство бетонной кровли"
+    },
+    {
+      "task_name": "Установка лестниц",
+      "duration_days": 10,
+      "depends_on": [
+        "Кладка кровли"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка железобетонных лестничных клеток"
+    },
+    {
+      "task_name": "Монтаж окон и дверей",
+      "duration_days": 10,
+      "depends_on": [
+        "Установка лестниц"
+      ],
+      "workers_required": 12,
+      "work_shifts": 2,
+      "description": "Установка ПВХ-окон и металлических дверей"
+    },
+    {
+      "task_name": "Завершающие работы",
+      "duration_days": 30,
+      "depends_on": [
+        "Монтаж окон и дверей"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Отделка помещений, установка инженерных систем"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 1962.",
+  "rag_context_used": false
+}

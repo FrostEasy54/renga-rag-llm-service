@@ -1,0 +1,346 @@
+{
+  "project_name": "9-этажный монолитный МКД",
+  "total_duration_days": 270,
+  "tasks": [
+    {
+      "task_name": "Подготовка и ограждение строительной площадки",
+      "duration_days": 15,
+      "depends_on": [],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Подготовка территории, устройство временных сооружений"
+    },
+    {
+      "task_name": "Устройство временных сооружений и подключение временных коммуникаций",
+      "duration_days": 15,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство кабельных линий, водопроводных труб"
+    },
+    {
+      "task_name": "Геодезическая разбивка осей здания",
+      "duration_days": 5,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Разбивка границ и осей здания"
+    },
+    {
+      "task_name": "Земляные работы (разработка котлована или траншей)",
+      "duration_days": 15,
+      "depends_on": [
+        "Геодезическая разбивка осей здания"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Разработка котлована и уборка территории"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 45,
+      "depends_on": [
+        "Земляные работы (разработка котлована или траншей)"
+      ],
+      "workers_required": 7,
+      "work_shifts": 2,
+      "description": "Положение опалубки и бетонирование фундамента"
+    },
+    {
+      "task_name": "Гидроизоляция фундамента",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Применение гидроизоляционных материалов"
+    },
+    {
+      "task_name": "Обратная засыпка пазух котлована",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Засыпка грунтом после устройства фундамента"
+    },
+    {
+      "task_name": "Возведение стен 1-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Обратная засыпка пазух котлована"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на первом этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 1-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 1-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на первом этаже"
+    },
+    {
+      "task_name": "Возведение стен 2-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытия 1-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на втором этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 2-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 2-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на втором этаже"
+    },
+    {
+      "task_name": "Возведение стен 3-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытия 2-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на третьем этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 3-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 3-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на третьем этаже"
+    },
+    {
+      "task_name": "Возведение стен 4-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытия 3-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на четвертом этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 4-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 4-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на четвертом этаже"
+    },
+    {
+      "task_name": "Возведение стен 5-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытия 4-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на пятом этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 5-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 5-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на пятом этаже"
+    },
+    {
+      "task_name": "Возведение стен 6-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытия 5-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на шестом этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 6-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 6-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на шестом этаже"
+    },
+    {
+      "task_name": "Возведение стен 7-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытия 6-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на седьмом этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 7-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 7-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на седьмом этаже"
+    },
+    {
+      "task_name": "Возведение стен 8-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытия 7-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на восьмом этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 8-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 8-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на восьмом этаже"
+    },
+    {
+      "task_name": "Возведение стен 9-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытия 8-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение стен на девятом этаже"
+    },
+    {
+      "task_name": "Устройство перекрытия 9-го этажа",
+      "duration_days": 30,
+      "depends_on": [
+        "Возведение стен 9-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия на девятом этаже"
+    },
+    {
+      "task_name": "Кровельные работы",
+      "duration_days": 45,
+      "depends_on": [
+        "Устройство перекрытия 9-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка кровли и стропильной системы"
+    },
+    {
+      "task_name": "Монтаж оконных и наружных дверных блоков",
+      "duration_days": 30,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка окон и дверей"
+    },
+    {
+      "task_name": "Прокладка инженерных сетей, черновой этап",
+      "duration_days": 45,
+      "depends_on": [
+        "Монтаж оконных и наружных дверных блоков"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Прокладка электрики, водопровода, канализации"
+    },
+    {
+      "task_name": "Штукатурные работы (внутренние)",
+      "duration_days": 45,
+      "depends_on": [
+        "Прокладка инженерных сетей, черновой этап"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Штукатурка стен и потолков"
+    },
+    {
+      "task_name": "Устройство полов (стяжка, плитка, ламинат)",
+      "duration_days": 45,
+      "depends_on": [
+        "Штукатурные работы (внутренние)"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство полов на всех этажах"
+    },
+    {
+      "task_name": "Малярные и обойные работы",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство полов (стяжка, плитка, ламинат)"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Малярная и обойная отделка"
+    },
+    {
+      "task_name": "Установка инженерного оборудования, чистовой этап",
+      "duration_days": 30,
+      "depends_on": [
+        "Малярные и обойные работы"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка радиаторов, сантехнических приборов, розеток"
+    },
+    {
+      "task_name": "Отделка фасада",
+      "duration_days": 30,
+      "depends_on": [
+        "Монтаж оконных и наружных дверных блоков"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка утеплителя, финишной облицовки"
+    },
+    {
+      "task_name": "Благоустройство территории",
+      "duration_days": 15,
+      "depends_on": [
+        "Отделка фасада"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство отмостки, дорожек, озеленение"
+    }
+  ],
+  "notes": "Каждый этап выполняется в две смены, за исключением критических этапов.",
+  "rag_context_used": true
+}

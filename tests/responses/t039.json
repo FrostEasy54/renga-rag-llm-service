@@ -1,0 +1,96 @@
+{
+  "project_name": "Одноэтажный сельский медпункт",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 6,
+      "work_shifts": 1,
+      "description": "Монтаж железобетонного фундамента"
+    },
+    {
+      "task_name": "Установка стен",
+      "duration_days": 20,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 1,
+      "description": "Установка кирпичных стен"
+    },
+    {
+      "task_name": "Монтаж опор",
+      "duration_days": 3,
+      "depends_on": [
+        "Установка стен"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Установка железобетонных опор"
+    },
+    {
+      "task_name": "Монтаж пола",
+      "duration_days": 5,
+      "depends_on": [
+        "Монтаж опор"
+      ],
+      "workers_required": 6,
+      "work_shifts": 1,
+      "description": "Установка железобетонного пола"
+    },
+    {
+      "task_name": "Установка кровли",
+      "duration_days": 3,
+      "depends_on": [
+        "Монтаж пола"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Установка металлической крыши"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 2,
+      "depends_on": [
+        "Установка кровли"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 2,
+      "depends_on": [
+        "Установка окон"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка деревянных дверей"
+    },
+    {
+      "task_name": "Отделочные работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Установка дверей"
+      ],
+      "workers_required": 8,
+      "work_shifts": 1,
+      "description": "Проведение отделочных работ"
+    },
+    {
+      "task_name": "Заключительные проверки и сдача объекта",
+      "duration_days": 5,
+      "depends_on": [
+        "Отделочные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Проведение всех необходимых проверок и сдача объекта"
+    }
+  ],
+  "notes": "Этот план предполагает использование стандартных рабочих смен (8 часов в день). Общее количество рабочих дней составляет 120. Учитывайте, что реальное время может отличаться в зависимости от условий строительства и других факторов.",
+  "rag_context_used": false
+}

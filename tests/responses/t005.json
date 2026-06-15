@@ -1,0 +1,167 @@
+{
+  "project_name": "Дачный одноэтажный дом",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Подготовка строительной площадки",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Ограждение, временные сооружения и коммуникации, геодезическая разбивка"
+    },
+    {
+      "task_name": "Земляные работы",
+      "duration_days": 7,
+      "depends_on": [
+        "Подготовка строительной площадки"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Разработка котлована, устройство фундамента"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 7,
+      "depends_on": [
+        "Земляные работы"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Бетонирование фундаментных элементов"
+    },
+    {
+      "task_name": "Гидроизоляция фундамента",
+      "duration_days": 3,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Применение гидроизоляционных материалов"
+    },
+    {
+      "task_name": "Возведение стен",
+      "duration_days": 15,
+      "depends_on": [
+        "Гидроизоляция фундамента"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство несущих и перегородочных стен"
+    },
+    {
+      "task_name": "Устройство перекрытия",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение стен"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Бетонирование перекрытия"
+    },
+    {
+      "task_name": "Кровельные работы",
+      "duration_days": 7,
+      "depends_on": [
+        "Устройство перекрытия"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Стропильная система и кровельный пирог"
+    },
+    {
+      "task_name": "Монтаж оконных блоков",
+      "duration_days": 3,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка оконных блоков"
+    },
+    {
+      "task_name": "Монтаж наружных дверей",
+      "duration_days": 3,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка наружных дверей"
+    },
+    {
+      "task_name": "Прокладка инженерных сетей, черновой этап",
+      "duration_days": 10,
+      "depends_on": [
+        "Монтаж оконных блоков",
+        "Монтаж наружных дверей"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Электрика, водопровод, канализация, стояки отопления"
+    },
+    {
+      "task_name": "Штукатурные работы",
+      "duration_days": 7,
+      "depends_on": [
+        "Прокладка инженерных сетей"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Внутренние штукатурные работы"
+    },
+    {
+      "task_name": "Устройство полов",
+      "duration_days": 5,
+      "depends_on": [
+        "Штукатурные работы"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Стяжка, плитка, ламинат"
+    },
+    {
+      "task_name": "Малярные и обойные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Устройство полов"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Покраска, нанесение обоев"
+    },
+    {
+      "task_name": "Установка инженерного оборудования",
+      "duration_days": 5,
+      "depends_on": [
+        "Малярные и обойные работы"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Радиаторы, сантехнические приборы, розетки, выключатели"
+    },
+    {
+      "task_name": "Отделка фасада",
+      "duration_days": 7,
+      "depends_on": [
+        "Установка инженерного оборудования"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Утепление, финишная облицовка"
+    },
+    {
+      "task_name": "Благоустройство территории",
+      "duration_days": 5,
+      "depends_on": [
+        "Отделка фасада"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Озеленение, отмостка, дорожки"
+    }
+  ],
+  "notes": "Все задачи выполнены в соответствии с критическими правилами последовательности. Общая продолжительность проекта составляет 120 дней.",
+  "rag_context_used": false
+}

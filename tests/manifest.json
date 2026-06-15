@@ -1,0 +1,320 @@
+{
+  "version": "1.0",
+  "experiment": "RAG vs no-RAG (см. диплом, гл. 2.2)",
+  "models_count": 15,
+  "groups": {
+    "small": "1-2 этажа, 80-250 м² (5 моделей)",
+    "medium": "3-9 этажей, 1500-6000 м² (5 моделей)",
+    "large": "10-17 этажей, 8000-25000 м² (5 моделей)"
+  },
+  "mandatory_stages": [
+    {
+      "id": "preparation",
+      "name": "Подготовительные и земляные работы",
+      "keywords": [
+        "подготов",
+        "земляные",
+        "котлован",
+        "разбивк"
+      ]
+    },
+    {
+      "id": "foundation",
+      "name": "Устройство фундамента",
+      "keywords": [
+        "фундамент"
+      ]
+    },
+    {
+      "id": "structures",
+      "name": "Возведение несущих и ограждающих конструкций",
+      "keywords": [
+        "стен",
+        "несущ",
+        "монолит",
+        "кладк",
+        "каркас"
+      ]
+    },
+    {
+      "id": "slabs",
+      "name": "Устройство перекрытий",
+      "keywords": [
+        "перекрыт",
+        "плит"
+      ]
+    },
+    {
+      "id": "roof",
+      "name": "Устройство кровли",
+      "keywords": [
+        "кровл",
+        "крыш"
+      ]
+    },
+    {
+      "id": "openings",
+      "name": "Заполнение проёмов (окна, двери)",
+      "keywords": [
+        "окон",
+        "оконных",
+        "двер",
+        "проём"
+      ]
+    },
+    {
+      "id": "exterior",
+      "name": "Наружная отделка / фасадные работы",
+      "keywords": [
+        "наружн",
+        "фасад",
+        "облиц"
+      ]
+    },
+    {
+      "id": "interior",
+      "name": "Внутренняя отделка",
+      "keywords": [
+        "внутрен",
+        "отделк",
+        "штукатур",
+        "малярн"
+      ]
+    },
+    {
+      "id": "engineering",
+      "name": "Монтаж инженерных систем",
+      "keywords": [
+        "инженер",
+        "сети",
+        "отопл",
+        "электро",
+        "вентил",
+        "водопро",
+        "канализ"
+      ]
+    },
+    {
+      "id": "landscaping",
+      "name": "Благоустройство территории",
+      "keywords": [
+        "благоустро",
+        "ландшафт",
+        "озеленени"
+      ]
+    }
+  ],
+  "precedence_pairs": [
+    {
+      "before": "preparation",
+      "after": "foundation"
+    },
+    {
+      "before": "foundation",
+      "after": "structures"
+    },
+    {
+      "before": "structures",
+      "after": "slabs"
+    },
+    {
+      "before": "slabs",
+      "after": "roof"
+    },
+    {
+      "before": "structures",
+      "after": "openings"
+    },
+    {
+      "before": "roof",
+      "after": "exterior"
+    },
+    {
+      "before": "openings",
+      "after": "interior"
+    },
+    {
+      "before": "exterior",
+      "after": "interior"
+    },
+    {
+      "before": "structures",
+      "after": "engineering"
+    },
+    {
+      "before": "interior",
+      "after": "landscaping"
+    },
+    {
+      "before": "exterior",
+      "after": "landscaping"
+    }
+  ],
+  "buildings": [
+    {
+      "id": "m01",
+      "group": "small",
+      "description": "Дачный одноэтажный дом из бруса",
+      "filename": "buildings/m01.json",
+      "floors": 1,
+      "total_area": 80.0,
+      "building_type": "residential",
+      "t_norm_days": 90,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m02",
+      "group": "small",
+      "description": "Двухэтажный кирпичный коттедж",
+      "filename": "buildings/m02.json",
+      "floors": 2,
+      "total_area": 180.0,
+      "building_type": "residential",
+      "t_norm_days": 150,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m03",
+      "group": "small",
+      "description": "Одноэтажный гаражный комплекс из сборного ЖБ",
+      "filename": "buildings/m03.json",
+      "floors": 1,
+      "total_area": 120.0,
+      "building_type": "industrial",
+      "t_norm_days": 100,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m04",
+      "group": "small",
+      "description": "Двухэтажный жилой дом из газобетона",
+      "filename": "buildings/m04.json",
+      "floors": 2,
+      "total_area": 220.0,
+      "building_type": "residential",
+      "t_norm_days": 130,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m05",
+      "group": "small",
+      "description": "Одноэтажный медпункт (общественное здание)",
+      "filename": "buildings/m05.json",
+      "floors": 1,
+      "total_area": 250.0,
+      "building_type": "public",
+      "t_norm_days": 180,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m06",
+      "group": "medium",
+      "description": "5-этажный кирпичный МКД (классический пример)",
+      "filename": "buildings/m06.json",
+      "floors": 5,
+      "total_area": 3200.0,
+      "building_type": "residential",
+      "t_norm_days": 290,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m07",
+      "group": "medium",
+      "description": "3-этажная школа из монолитного ЖБ",
+      "filename": "buildings/m07.json",
+      "floors": 3,
+      "total_area": 2800.0,
+      "building_type": "public",
+      "t_norm_days": 360,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m08",
+      "group": "medium",
+      "description": "7-этажный МКД из сборного железобетона",
+      "filename": "buildings/m08.json",
+      "floors": 7,
+      "total_area": 4500.0,
+      "building_type": "residential",
+      "t_norm_days": 330,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m09",
+      "group": "medium",
+      "description": "9-этажный монолитный МКД",
+      "filename": "buildings/m09.json",
+      "floors": 9,
+      "total_area": 5800.0,
+      "building_type": "residential",
+      "t_norm_days": 420,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m10",
+      "group": "medium",
+      "description": "4-этажный офисный центр (монолит + кирпич)",
+      "filename": "buildings/m10.json",
+      "floors": 4,
+      "total_area": 1800.0,
+      "building_type": "commercial",
+      "t_norm_days": 270,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m11",
+      "group": "large",
+      "description": "12-этажный монолитный МКД",
+      "filename": "buildings/m11.json",
+      "floors": 12,
+      "total_area": 8500.0,
+      "building_type": "residential",
+      "t_norm_days": 510,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m12",
+      "group": "large",
+      "description": "16-этажный монолитный МКД",
+      "filename": "buildings/m12.json",
+      "floors": 16,
+      "total_area": 15000.0,
+      "building_type": "residential",
+      "t_norm_days": 660,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m13",
+      "group": "large",
+      "description": "14-этажный бизнес-центр (монолит + стеклянный фасад)",
+      "filename": "buildings/m13.json",
+      "floors": 14,
+      "total_area": 11000.0,
+      "building_type": "commercial",
+      "t_norm_days": 600,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m14",
+      "group": "large",
+      "description": "17-этажный жилой комплекс из сборного ЖБ",
+      "filename": "buildings/m14.json",
+      "floors": 17,
+      "total_area": 22000.0,
+      "building_type": "residential",
+      "t_norm_days": 780,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    },
+    {
+      "id": "m15",
+      "group": "large",
+      "description": "10-этажный многофункциональный комплекс",
+      "filename": "buildings/m15.json",
+      "floors": 10,
+      "total_area": 25000.0,
+      "building_type": "commercial",
+      "t_norm_days": 720,
+      "t_norm_source": "Расчёт по методике МДС 12-43.2008 «Нормирование продолжительности строительства зданий и сооружений» для соответствующей категории объекта"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "project_name": "Двухэтажный кирпичный коттедж",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Грунтовка и подготовка участка",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 4,
+      "work_shifts": 8,
+      "description": "Подготовка участка под строительство, выравнивание грунта"
+    },
+    {
+      "task_name": "Монтаж фундамента",
+      "duration_days": 10,
+      "depends_on": [
+        "Грунтовка и подготовка участка"
+      ],
+      "workers_required": 6,
+      "work_shifts": 8,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Монтаж стен",
+      "duration_days": 20,
+      "depends_on": [
+        "Монтаж фундамента"
+      ],
+      "workers_required": 8,
+      "work_shifts": 8,
+      "description": "Устройство кирпичных стен"
+    },
+    {
+      "task_name": "Установка пола",
+      "duration_days": 10,
+      "depends_on": [
+        "Монтаж стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 8,
+      "description": "Устройство железобетонных полов"
+    },
+    {
+      "task_name": "Установка крыши",
+      "duration_days": 7,
+      "depends_on": [
+        "Монтаж стен"
+      ],
+      "workers_required": 4,
+      "work_shifts": 8,
+      "description": "Устройство деревянной кровли"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 5,
+      "depends_on": [
+        "Монтаж стен"
+      ],
+      "workers_required": 3,
+      "work_shifts": 8,
+      "description": "Установка пластиковых окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 4,
+      "depends_on": [
+        "Монтаж стен"
+      ],
+      "workers_required": 3,
+      "work_shifts": 8,
+      "description": "Установка деревянных дверей"
+    },
+    {
+      "task_name": "Устройство лестницы",
+      "duration_days": 5,
+      "depends_on": [
+        "Монтаж стен"
+      ],
+      "workers_required": 2,
+      "work_shifts": 8,
+      "description": "Устройство железобетонной лестницы"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Установка крыши",
+        "Установка окон",
+        "Установка дверей",
+        "Устройство лестницы"
+      ],
+      "workers_required": 5,
+      "work_shifts": 8,
+      "description": "Проведение финальных работ, чистовая отделка"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 87.",
+  "rag_context_used": false
+}

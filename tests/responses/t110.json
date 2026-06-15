@@ -1,0 +1,108 @@
+{
+  "project_name": "14-этажный бизнес-центр",
+  "total_duration_days": 270,
+  "tasks": [
+    {
+      "task_name": "Фундамент",
+      "duration_days": 30,
+      "depends_on": [],
+      "workers_required": 50,
+      "work_shifts": 1,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Стены (железобетонные)",
+      "duration_days": 60,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 100,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных стен"
+    },
+    {
+      "task_name": "Стены (стеклянные)",
+      "duration_days": 30,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 50,
+      "work_shifts": 1,
+      "description": "Устройство стеклянных стен"
+    },
+    {
+      "task_name": "Столбы (железобетонные)",
+      "duration_days": 20,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 30,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных столбов"
+    },
+    {
+      "task_name": "Балки (стальные)",
+      "duration_days": 20,
+      "depends_on": [
+        "Стены (железобетонные)",
+        "Столбы (железобетонные)"
+      ],
+      "workers_required": 40,
+      "work_shifts": 1,
+      "description": "Устройство стальных балок"
+    },
+    {
+      "task_name": "Плоскости (железобетонные)",
+      "duration_days": 60,
+      "depends_on": [
+        "Стены (железобетонные)",
+        "Столбы (железобетонные)"
+      ],
+      "workers_required": 150,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных плоскостей"
+    },
+    {
+      "task_name": "Крыша",
+      "duration_days": 30,
+      "depends_on": [
+        "Плоскости (железобетонные)"
+      ],
+      "workers_required": 50,
+      "work_shifts": 1,
+      "description": "Устройство металлической крыши"
+    },
+    {
+      "task_name": "Окна (алюминиевые)",
+      "duration_days": 20,
+      "depends_on": [
+        "Плоскости (железобетонные)"
+      ],
+      "workers_required": 30,
+      "work_shifts": 1,
+      "description": "Установка алюминиевых окон"
+    },
+    {
+      "task_name": "Двери (стеклянные)",
+      "duration_days": 20,
+      "depends_on": [
+        "Плоскости (железобетонные)"
+      ],
+      "workers_required": 30,
+      "work_shifts": 1,
+      "description": "Установка стеклянных дверей"
+    },
+    {
+      "task_name": "Лестницы",
+      "duration_days": 20,
+      "depends_on": [
+        "Плоскости (железобетонные)"
+      ],
+      "workers_required": 30,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных лестниц"
+    }
+  ],
+  "notes": "Этот план предполагает использование стандартной рабочей смены и может потребовать корректировки в зависимости от конкретных условий строительства.",
+  "rag_context_used": false
+}

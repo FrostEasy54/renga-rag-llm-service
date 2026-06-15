@@ -1,0 +1,109 @@
+{
+  "project_name": "5-этажный кирпичный МКД",
+  "total_duration_days": 180,
+  "tasks": [
+    {
+      "task_name": "Фундамент",
+      "duration_days": 10,
+      "depends_on": [],
+      "workers_required": 20,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Каркас здания",
+      "duration_days": 45,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Установка железобетонных столбов и бетонные перекрытия"
+    },
+    {
+      "task_name": "Каркас стен",
+      "duration_days": 45,
+      "depends_on": [
+        "Каркас здания"
+      ],
+      "workers_required": 20,
+      "work_shifts": 2,
+      "description": "Установка кирпичных стен"
+    },
+    {
+      "task_name": "Полы",
+      "duration_days": 30,
+      "depends_on": [
+        "Каркас здания"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Устройство бетонных половых перекрытий"
+    },
+    {
+      "task_name": "Полы на лестничные клетки",
+      "duration_days": 10,
+      "depends_on": [
+        "Каркас здания"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство бетонных половых перекрытий на лестничные клетки"
+    },
+    {
+      "task_name": "Лестницы",
+      "duration_days": 10,
+      "depends_on": [
+        "Каркас здания"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных лестниц"
+    },
+    {
+      "task_name": "Крыша",
+      "duration_days": 10,
+      "depends_on": [
+        "Полы на лестничные клетки",
+        "Лестницы"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство бетонной крыши"
+    },
+    {
+      "task_name": "Окна",
+      "duration_days": 10,
+      "depends_on": [
+        "Каркас здания"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Двери",
+      "duration_days": 10,
+      "depends_on": [
+        "Каркас здания"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 30,
+      "depends_on": [
+        "Крыша",
+        "Окна",
+        "Двери"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Отделочные и финальные работы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 218.",
+  "rag_context_used": false
+}

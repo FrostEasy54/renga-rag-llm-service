@@ -1,0 +1,96 @@
+{
+  "project_name": "Одноэтажный сельский медпункт",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Подготовка к строительству",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Оформление разрешений, подготовка площадки"
+    },
+    {
+      "task_name": "Строительство фундамента",
+      "duration_days": 10,
+      "depends_on": [
+        "Подготовка к строительству"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Сборка стен",
+      "duration_days": 15,
+      "depends_on": [
+        "Строительство фундамента"
+      ],
+      "workers_required": 20,
+      "work_shifts": 3,
+      "description": "Устройство кирпичных стен"
+    },
+    {
+      "task_name": "Сборка колонн",
+      "duration_days": 5,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных колонн"
+    },
+    {
+      "task_name": "Сборка перекрытия",
+      "duration_days": 7,
+      "depends_on": [
+        "Сборка колонн"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного перекрытия"
+    },
+    {
+      "task_name": "Монтаж кровли",
+      "duration_days": 3,
+      "depends_on": [
+        "Сборка перекрытия"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Установка металлопроката на крышу"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 4,
+      "depends_on": [
+        "Монтаж кровли"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 2,
+      "depends_on": [
+        "Установка окон"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка деревянных дверей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Установка дверей"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Оштукатуривание, окраска, уборка"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 84.",
+  "rag_context_used": false
+}

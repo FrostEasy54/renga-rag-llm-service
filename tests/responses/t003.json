@@ -1,0 +1,88 @@
+{
+  "project_name": "Дачный одноэтажный дом",
+  "total_duration_days": 45,
+  "tasks": [
+    {
+      "task_name": "Подготовка строительной площадки",
+      "duration_days": 3,
+      "depends_on": [],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Удаление мусора, разметка территории"
+    },
+    {
+      "task_name": "Создание фундамента",
+      "duration_days": 5,
+      "depends_on": [
+        "Подготовка строительной площадки"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Устройство бетонного фундамента"
+    },
+    {
+      "task_name": "Сборка стен",
+      "duration_days": 7,
+      "depends_on": [
+        "Создание фундамента"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка бруса для стен"
+    },
+    {
+      "task_name": "Устройство пола",
+      "duration_days": 3,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Укладка деревянного пола"
+    },
+    {
+      "task_name": "Устройство крыши",
+      "duration_days": 5,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Монтаж деревянной кровли"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 2,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 2,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка деревянных дверей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 4,
+      "depends_on": [
+        "Устройство крыши",
+        "Установка окон",
+        "Установка дверей"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Отделочные работы, проверка готовности здания"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 29.",
+  "rag_context_used": false
+}

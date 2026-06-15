@@ -1,0 +1,87 @@
+{
+  "project_name": "Двухэтажный жилой дом из газобетона",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Подготовка строительной площадки",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Очистка территории, разметка, установка ограждений"
+    },
+    {
+      "task_name": "Создание фундамента",
+      "duration_days": 10,
+      "depends_on": [
+        "Подготовка строительной площадки"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного основания"
+    },
+    {
+      "task_name": "Строительство стен",
+      "duration_days": 30,
+      "depends_on": [
+        "Создание фундамента"
+      ],
+      "workers_required": 12,
+      "work_shifts": 2,
+      "description": "Устройство газобетонных стен"
+    },
+    {
+      "task_name": "Установка перекрытий",
+      "duration_days": 15,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных перекрытий"
+    },
+    {
+      "task_name": "Конструкция крыши",
+      "duration_days": 10,
+      "depends_on": [
+        "Установка перекрытий"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Устройство деревянной крыши"
+    },
+    {
+      "task_name": "Установка окон и дверей",
+      "duration_days": 5,
+      "depends_on": [
+        "Конструкция крыши"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Установка ПВХ-окон и дверей"
+    },
+    {
+      "task_name": "Строительство лестницы",
+      "duration_days": 5,
+      "depends_on": [
+        "Установка перекрытий"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Устройство железобетонной лестницы"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 15,
+      "depends_on": [
+        "Установка окон и дверей",
+        "Строительство лестницы"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Проведение инженерных коммуникаций, отделочные работы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 102.",
+  "rag_context_used": false
+}

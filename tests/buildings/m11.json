@@ -1,0 +1,63 @@
+{
+  "name": "12-этажный монолитный МКД",
+  "building_type": "residential",
+  "floors": 12,
+  "total_area": 8500.0,
+  "elements": [
+    {
+      "type": "foundation",
+      "material": "Железобетон",
+      "volume": 600.0,
+      "count": 1
+    },
+    {
+      "type": "wall",
+      "material": "Железобетон",
+      "volume": 1320.0,
+      "count": 420
+    },
+    {
+      "type": "wall",
+      "material": "Газобетон",
+      "volume": 320.0,
+      "count": 180
+    },
+    {
+      "type": "column",
+      "material": "Железобетон",
+      "volume": 100.0,
+      "count": 144
+    },
+    {
+      "type": "slab",
+      "material": "Железобетон",
+      "volume": 1870.0,
+      "count": 13
+    },
+    {
+      "type": "roof",
+      "material": "Бетон",
+      "volume": 45.0,
+      "count": 1
+    },
+    {
+      "type": "window",
+      "material": "ПВХ",
+      "volume": 0.0,
+      "count": 240
+    },
+    {
+      "type": "door",
+      "material": "Металл",
+      "volume": 0.0,
+      "count": 200
+    },
+    {
+      "type": "stair",
+      "material": "Железобетон",
+      "volume": 60.0,
+      "count": 4
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 1203."
+}

@@ -1,0 +1,176 @@
+{
+  "project_name": "Одноэтажный гаражный комплекс",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Подготовка и ограждение строительной площадки",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Ограждение территории, разметка границ"
+    },
+    {
+      "task_name": "Устройство временных сооружений и подключение коммуникаций",
+      "duration_days": 3,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка временных сооружений, подключение электричества"
+    },
+    {
+      "task_name": "Геодезическая разбивка осей здания",
+      "duration_days": 1,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Выставление осей здания"
+    },
+    {
+      "task_name": "Земляные работы (разработка котлована)",
+      "duration_days": 7,
+      "depends_on": [
+        "Геодезическая разбивка осей здания"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Разработка котлована под фундамент"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 5,
+      "depends_on": [
+        "Земляные работы (разработка котлована)"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Возведение железобетонного фундамента"
+    },
+    {
+      "task_name": "Гидроизоляция фундамента и обратная засыпка пазух котлована",
+      "duration_days": 3,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Гидроизоляция и обратная засыпка"
+    },
+    {
+      "task_name": "Возведение стен 1-го этажа",
+      "duration_days": 7,
+      "depends_on": [
+        "Гидроизоляция фундамента и обратная засыпка пазух котлована"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Возведение железобетонных стен"
+    },
+    {
+      "task_name": "Устройство перекрытия 1-го этажа",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение стен 1-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка железобетонного перекрытия"
+    },
+    {
+      "task_name": "Кровельные работы",
+      "duration_days": 3,
+      "depends_on": [
+        "Устройство перекрытия 1-го этажа"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка металлочерепицы и утеплителя"
+    },
+    {
+      "task_name": "Монтаж оконных и наружных дверных блоков",
+      "duration_days": 3,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка окон и дверей"
+    },
+    {
+      "task_name": "Прокладка инженерных сетей, черновой этап",
+      "duration_days": 7,
+      "depends_on": [
+        "Монтаж оконных и наружных дверных блоков"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Прокладка электрики, водопровода, канализации"
+    },
+    {
+      "task_name": "Штукатурные работы (внутренние)",
+      "duration_days": 5,
+      "depends_on": [
+        "Прокладка инженерных сетей, черновой этап"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Приготовление и нанесение штукатурки"
+    },
+    {
+      "task_name": "Устройство полов (стяжка)",
+      "duration_days": 5,
+      "depends_on": [
+        "Штукатурные работы (внутренние)"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Полное утрамбовывание стяжки"
+    },
+    {
+      "task_name": "Малярные и обойные работы",
+      "duration_days": 3,
+      "depends_on": [
+        "Устройство полов (стяжка)"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Покраска стен, наклейка обоев"
+    },
+    {
+      "task_name": "Установка инженерного оборудования, чистовой этап",
+      "duration_days": 5,
+      "depends_on": [
+        "Малярные и обойные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка радиаторов, розеток, светильников"
+    },
+    {
+      "task_name": "Отделка фасада",
+      "duration_days": 5,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Утепление и облицовка фасада"
+    },
+    {
+      "task_name": "Благоустройство территории",
+      "duration_days": 3,
+      "depends_on": [
+        "Отделка фасада"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Укладка дорожек, озеленение"
+    }
+  ],
+  "notes": "Все работы выполняются в две смены ежедневно. В зависимости от объема работ и сложности можно корректировать количество рабочих.",
+  "rag_context_used": true
+}

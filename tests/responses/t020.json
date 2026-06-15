@@ -1,0 +1,96 @@
+{
+  "project_name": "Одноэтажный гаражный комплекс",
+  "total_duration_days": 60,
+  "tasks": [
+    {
+      "task_name": "Проведение разработки и подготовительных работ",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Определение границ строительства, уборка территории"
+    },
+    {
+      "task_name": "Создание фундамента",
+      "duration_days": 7,
+      "depends_on": [
+        "Проведение разработки и подготовительных работ"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Сборка столбов",
+      "duration_days": 6,
+      "depends_on": [
+        "Создание фундамента"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Установка железобетонных столбов"
+    },
+    {
+      "task_name": "Сборка стен",
+      "duration_days": 8,
+      "depends_on": [
+        "Создание фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных стен"
+    },
+    {
+      "task_name": "Установка пола",
+      "duration_days": 4,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного пола"
+    },
+    {
+      "task_name": "Установка крыши",
+      "duration_days": 3,
+      "depends_on": [
+        "Установка пола"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Установка металлической крыши"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 2,
+      "depends_on": [
+        "Установка пола"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 2,
+      "depends_on": [
+        "Установка пола"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка металлических окон"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Установка окон"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Очистка территории, проверка работоспособности"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 35.",
+  "rag_context_used": false
+}

@@ -1,0 +1,96 @@
+{
+  "project_name": "9-этажный монолитный МКД",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 45,
+      "depends_on": [],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Создание железобетонного фундамента объемом 400.0 м³"
+    },
+    {
+      "task_name": "Установка стен",
+      "duration_days": 60,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 30,
+      "work_shifts": 1,
+      "description": "Установка железобетонных стен объемом 945.0 м³ и кирпичных стен объемом 180.0 м³"
+    },
+    {
+      "task_name": "Установка колонн",
+      "duration_days": 30,
+      "depends_on": [
+        "Установка стен"
+      ],
+      "workers_required": 25,
+      "work_shifts": 1,
+      "description": "Установка железобетонных колонн объемом 90.0 м³"
+    },
+    {
+      "task_name": "Установка перекрытий",
+      "duration_days": 45,
+      "depends_on": [
+        "Установка колонн"
+      ],
+      "workers_required": 35,
+      "work_shifts": 1,
+      "description": "Установка железобетонных перекрытий объемом 1275.0 м³"
+    },
+    {
+      "task_name": "Создание крыши",
+      "duration_days": 45,
+      "depends_on": [
+        "Установка перекрытий"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Создание бетонной крыши объемом 35.0 м³"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 30,
+      "depends_on": [
+        "Создание крыши"
+      ],
+      "workers_required": 15,
+      "work_shifts": 1,
+      "description": "Установка ПВХ-окон объемом 0.0 м³"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 20,
+      "depends_on": [
+        "Установка окон"
+      ],
+      "workers_required": 10,
+      "work_shifts": 1,
+      "description": "Установка металлических дверей объемом 0.0 м³"
+    },
+    {
+      "task_name": "Создание лестниц",
+      "duration_days": 30,
+      "depends_on": [
+        "Установка дверей"
+      ],
+      "workers_required": 15,
+      "work_shifts": 1,
+      "description": "Создание железобетонных лестниц объемом 45.0 м³"
+    },
+    {
+      "task_name": "Завершающие работы",
+      "duration_days": 30,
+      "depends_on": [
+        "Создание лестниц"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Проведение всех необходимых завершающих работ"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 798.",
+  "rag_context_used": false
+}

@@ -1,0 +1,100 @@
+{
+  "project_name": "17-этажный жилой комплекс",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 40,
+      "depends_on": [],
+      "workers_required": 120,
+      "work_shifts": 8,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Строительство стен",
+      "duration_days": 90,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 150,
+      "work_shifts": 8,
+      "description": "Устройство железобетонных и кирпичных стен"
+    },
+    {
+      "task_name": "Строительство колонн",
+      "duration_days": 30,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 50,
+      "work_shifts": 8,
+      "description": "Устройство железобетонных колонн"
+    },
+    {
+      "task_name": "Монтаж перекрытий",
+      "duration_days": 60,
+      "depends_on": [
+        "Строительство стен",
+        "Строительство колонн"
+      ],
+      "workers_required": 100,
+      "work_shifts": 8,
+      "description": "Устройство железобетонных перекрытий"
+    },
+    {
+      "task_name": "Монтаж кровли",
+      "duration_days": 20,
+      "depends_on": [
+        "Монтаж перекрытий"
+      ],
+      "workers_required": 30,
+      "work_shifts": 8,
+      "description": "Устройство бетонной кровли"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 45,
+      "depends_on": [
+        "Монтаж перекрытий"
+      ],
+      "workers_required": 60,
+      "work_shifts": 8,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 35,
+      "depends_on": [
+        "Монтаж перекрытий"
+      ],
+      "workers_required": 40,
+      "work_shifts": 8,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Строительство лестниц",
+      "duration_days": 25,
+      "depends_on": [
+        "Монтаж перекрытий"
+      ],
+      "workers_required": 30,
+      "work_shifts": 8,
+      "description": "Устройство железобетонных лестничных маршей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 60,
+      "depends_on": [
+        "Монтаж кровли",
+        "Установка окон",
+        "Установка дверей",
+        "Строительство лестниц"
+      ],
+      "workers_required": 120,
+      "work_shifts": 8,
+      "description": "Заключительные отделочные работы, проверка и тестирование"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2267.",
+  "rag_context_used": false
+}

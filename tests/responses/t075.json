@@ -1,0 +1,100 @@
+{
+  "project_name": "9-этажный монолитный МКД",
+  "total_duration_days": 270,
+  "tasks": [
+    {
+      "task_name": "Фундамент",
+      "duration_days": 30,
+      "depends_on": [],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Стены",
+      "duration_days": 60,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных стен"
+    },
+    {
+      "task_name": "Кирпичные стены",
+      "duration_days": 15,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Устройство кирпичных стен"
+    },
+    {
+      "task_name": "Столбы",
+      "duration_days": 15,
+      "depends_on": [
+        "Фундамент"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных столбов"
+    },
+    {
+      "task_name": "Плоскости",
+      "duration_days": 45,
+      "depends_on": [
+        "Фундамент",
+        "Стены",
+        "Кирпичные стены",
+        "Столбы"
+      ],
+      "workers_required": 20,
+      "work_shifts": 3,
+      "description": "Устройство железобетонных плоскостей"
+    },
+    {
+      "task_name": "Лестницы",
+      "duration_days": 15,
+      "depends_on": [
+        "Плоскости"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных лестниц"
+    },
+    {
+      "task_name": "Оконные проемы",
+      "duration_days": 10,
+      "depends_on": [
+        "Плоскости"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка ПВХ окон"
+    },
+    {
+      "task_name": "Дверные проемы",
+      "duration_days": 10,
+      "depends_on": [
+        "Плоскости"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Крыша",
+      "duration_days": 10,
+      "depends_on": [
+        "Плоскости",
+        "Лестницы"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство бетонной крыши"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 798.",
+  "rag_context_used": false
+}

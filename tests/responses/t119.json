@@ -1,0 +1,120 @@
+{
+  "project_name": "17-этажный жилой комплекс",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Земляные работы и устройство фундамента",
+      "duration_days": 45,
+      "depends_on": [],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Выполнение земляных работ, устройство фундаментов"
+    },
+    {
+      "task_name": "Строительство стен (железобетон)",
+      "duration_days": 60,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Строительство железобетонных стен"
+    },
+    {
+      "task_name": "Строительство стен (кирпич)",
+      "duration_days": 30,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Строительство кирпичных стен"
+    },
+    {
+      "task_name": "Строительство колонн (железобетон)",
+      "duration_days": 30,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Строительство железобетонных колонн"
+    },
+    {
+      "task_name": "Устройство перекрытий (железобетон)",
+      "duration_days": 45,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных перекрытий"
+    },
+    {
+      "task_name": "Кладка кровли",
+      "duration_days": 30,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Устройство бетонной кровли"
+    },
+    {
+      "task_name": "Монтаж окон (ПВХ)",
+      "duration_days": 30,
+      "depends_on": [
+        "Строительство стен (железобетон)",
+        "Строительство стен (кирпич)"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Монтаж пластиковых окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 30,
+      "depends_on": [
+        "Строительство стен (железобетон)",
+        "Строительство стен (кирпич)"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Кладка лестниц",
+      "duration_days": 30,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Строительство железобетонных лестниц"
+    },
+    {
+      "task_name": "Комплексная отделка",
+      "duration_days": 60,
+      "depends_on": [
+        "Монтаж окон (ПВХ)",
+        "Установка дверей",
+        "Кладка лестниц"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Отделочные работы, внутренняя и внешняя отделка"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 45,
+      "depends_on": [
+        "Комплексная отделка"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Проверка готовности объекта, уборка территории"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2267.",
+  "rag_context_used": false
+}

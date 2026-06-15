@@ -1,0 +1,107 @@
+{
+  "project_name": "10-этажный многофункциональный комплекс",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 45,
+      "depends_on": [],
+      "workers_required": 100,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Строительство стен",
+      "duration_days": 60,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 250,
+      "work_shifts": 3,
+      "description": "Устройство железобетонных, газобетонных и стеклянных стен"
+    },
+    {
+      "task_name": "Установка колонн",
+      "duration_days": 15,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 80,
+      "work_shifts": 2,
+      "description": "Установка железобетонных колонн"
+    },
+    {
+      "task_name": "Установка балок",
+      "duration_days": 15,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 60,
+      "work_shifts": 2,
+      "description": "Установка стальных балок"
+    },
+    {
+      "task_name": "Устройство перекрытий",
+      "duration_days": 30,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 150,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных перекрытий"
+    },
+    {
+      "task_name": "Монтаж кровли",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство перекрытий"
+      ],
+      "workers_required": 50,
+      "work_shifts": 2,
+      "description": "Установка металлической крыши"
+    },
+    {
+      "task_name": "Монтаж окон",
+      "duration_days": 10,
+      "depends_on": [
+        "Монтаж кровли"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Установка алюминиевых окон"
+    },
+    {
+      "task_name": "Монтаж дверей",
+      "duration_days": 15,
+      "depends_on": [
+        "Монтаж кровли"
+      ],
+      "workers_required": 40,
+      "work_shifts": 2,
+      "description": "Установка стеклянных дверей"
+    },
+    {
+      "task_name": "Строительство лестниц",
+      "duration_days": 15,
+      "depends_on": [
+        "Монтаж кровли"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных лестничных маршей"
+    },
+    {
+      "task_name": "Завершающие работы",
+      "duration_days": 45,
+      "depends_on": [
+        "Монтаж дверей",
+        "Строительство лестниц"
+      ],
+      "workers_required": 100,
+      "work_shifts": 2,
+      "description": "Установка внутренних систем, отделочные работы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2931.",
+  "rag_context_used": false
+}

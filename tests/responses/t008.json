@@ -1,0 +1,199 @@
+{
+  "project_name": "Дачный одноэтажный дом",
+  "total_duration_days": 90,
+  "tasks": [
+    {
+      "task_name": "Подготовка и ограждение строительной площадки",
+      "duration_days": 15,
+      "depends_on": [],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Подготовка территории, установка ограждения"
+    },
+    {
+      "task_name": "Устройство временных сооружений и подключение временных коммуникаций",
+      "duration_days": 10,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Установка временных конструкций, подключение коммуникаций"
+    },
+    {
+      "task_name": "Геодезическая разбивка осей здания",
+      "duration_days": 5,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Определение точек для размещения фундамента"
+    },
+    {
+      "task_name": "Земляные работы (разработка котлована)",
+      "duration_days": 5,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Разработка котлована под фундамент"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 10,
+      "depends_on": [
+        "Земляные работы (разработка котлована)"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Создание и укрепление фундаментной конструкции"
+    },
+    {
+      "task_name": "Гидроизоляция фундамента",
+      "duration_days": 5,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Применение гидроизоляционных материалов"
+    },
+    {
+      "task_name": "Обратная засыпка пазух котлована",
+      "duration_days": 5,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Засыпка и уплотнение земли вокруг фундамента"
+    },
+    {
+      "task_name": "Возведение стен 1-го этажа",
+      "duration_days": 15,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 3,
+      "work_shifts": 2,
+      "description": "Сборка и установка несущих стен"
+    },
+    {
+      "task_name": "Устройство перекрытия 1-го этажа",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение стен 1-го этажа"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Создание и укрепление перекрытия"
+    },
+    {
+      "task_name": "Кровельные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Устройство перекрытия 1-го этажа"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Монтаж стропильной системы и кровельного пирога"
+    },
+    {
+      "task_name": "Установка оконных блоков",
+      "duration_days": 5,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Монтаж оконных блоков"
+    },
+    {
+      "task_name": "Установка наружных дверей",
+      "duration_days": 5,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Монтаж наружных дверей"
+    },
+    {
+      "task_name": "Прокладка черновых инженерных сетей",
+      "duration_days": 5,
+      "depends_on": [
+        "Установка оконных блоков",
+        "Установка наружных дверей"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Прокладка водопровода, канализации и электрики"
+    },
+    {
+      "task_name": "Штукатурные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Установка оконных блоков",
+        "Установка наружных дверей"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Применение штукатурки для внутренних поверхностей"
+    },
+    {
+      "task_name": "Устройство полов",
+      "duration_days": 5,
+      "depends_on": [
+        "Штукатурные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Создание и укрепление пола"
+    },
+    {
+      "task_name": "Малярные и обойные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Установка оконных блоков",
+        "Установка наружных дверей"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Применение краски и обоев"
+    },
+    {
+      "task_name": "Установка чистовых инженерных элементов",
+      "duration_days": 5,
+      "depends_on": [
+        "Штукатурные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка радиаторов, сантехники и электроприборов"
+    },
+    {
+      "task_name": "Отделка фасада",
+      "duration_days": 5,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Применение утеплителя и облицовочных материалов"
+    },
+    {
+      "task_name": "Благоустройство территории",
+      "duration_days": 5,
+      "depends_on": [
+        "Отделка фасада"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка дорожек, озеленение и другие работы"
+    }
+  ],
+  "notes": "При необходимости можно увеличить количество рабочих для ускорения некоторых этапов строительства.",
+  "rag_context_used": true
+}

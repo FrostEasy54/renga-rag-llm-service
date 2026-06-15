@@ -1,0 +1,116 @@
+{
+  "project_name": "14-этажный бизнес-центр",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Инженерные изыскания и разработка проекта",
+      "duration_days": 90,
+      "depends_on": [],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Выполнение инженерных изысканий, разработка проектной документации"
+    },
+    {
+      "task_name": "Подготовка строительной площадки",
+      "duration_days": 30,
+      "depends_on": [
+        "Инженерные изыскания и разработка проекта"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Очистка территории, устройство временных дорог"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 60,
+      "depends_on": [
+        "Подготовка строительной площадки"
+      ],
+      "workers_required": 50,
+      "work_shifts": 2,
+      "description": "Выполнение работ по устройству железобетонного фундамента"
+    },
+    {
+      "task_name": "Устройство стен",
+      "duration_days": 120,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 80,
+      "work_shifts": 3,
+      "description": "Выполнение работ по устройству железобетонных и стеклянных стен"
+    },
+    {
+      "task_name": "Установка колонн",
+      "duration_days": 45,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Выполнение работ по установке железобетонных колонн"
+    },
+    {
+      "task_name": "Установка балок",
+      "duration_days": 45,
+      "depends_on": [
+        "Установка колонн"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Выполнение работ по установке стальных балок"
+    },
+    {
+      "task_name": "Устройство перекрытий",
+      "duration_days": 60,
+      "depends_on": [
+        "Установка балок"
+      ],
+      "workers_required": 40,
+      "work_shifts": 2,
+      "description": "Выполнение работ по устройству железобетонных перекрытий"
+    },
+    {
+      "task_name": "Монтаж кровли",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытий"
+      ],
+      "workers_required": 25,
+      "work_shifts": 1,
+      "description": "Выполнение работ по монтажу металлопрофиля"
+    },
+    {
+      "task_name": "Монтаж окон и дверей",
+      "duration_days": 45,
+      "depends_on": [
+        "Устройство перекрытий"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Выполнение работ по монтажу алюминиевых окон и стеклянных дверей"
+    },
+    {
+      "task_name": "Устройство лестниц",
+      "duration_days": 30,
+      "depends_on": [
+        "Монтаж кровли"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Выполнение работ по устройству железобетонных лестничных клеток"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 60,
+      "depends_on": [
+        "Устройство лестниц"
+      ],
+      "workers_required": 25,
+      "work_shifts": 1,
+      "description": "Выполнение работ по отделке помещений, установке внутренней и внешней инженерной трубы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2230.",
+  "rag_context_used": false
+}

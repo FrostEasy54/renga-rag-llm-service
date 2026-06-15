@@ -1,0 +1,98 @@
+{
+  "project_name": "16-этажный монолитный МКД",
+  "total_duration_days": 300,
+  "tasks": [
+    {
+      "task_name": "Грунтовые работы и устройство фундамента",
+      "duration_days": 45,
+      "depends_on": [],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "О__);бучение грунта, устройство опалубки и заливка железобетонного фундамента"
+    },
+    {
+      "task_name": "Устройство стен",
+      "duration_days": 60,
+      "depends_on": [
+        "Грунтовые работы и устройство фундамента"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Заливка железобетонных стен и монтаж газобетонных стен"
+    },
+    {
+      "task_name": "Установка колонн",
+      "duration_days": 15,
+      "depends_on": [
+        "Грунтовые работы и устройство фундамента"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Установка железобетонных колонн"
+    },
+    {
+      "task_name": "Устройство перекрытий",
+      "duration_days": 45,
+      "depends_on": [
+        "Грунтовые работы и устройство фундамента"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Заливка железобетонных перекрытий"
+    },
+    {
+      "task_name": "Устройство кровли",
+      "duration_days": 30,
+      "depends_on": [
+        "Грунтовые работы и устройство фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Монтаж бетонной кровли"
+    },
+    {
+      "task_name": "Устройство лестниц",
+      "duration_days": 30,
+      "depends_on": [
+        "Грунтовые работы и устройство фундамента"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Монтаж железобетонных лестниц"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Монтаж ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Монтаж металлических дверей"
+    },
+    {
+      "task_name": "Завершающие работы",
+      "duration_days": 60,
+      "depends_on": [
+        "Устройство кровли",
+        "Установка окон",
+        "Установка дверей"
+      ],
+      "workers_required": 25,
+      "work_shifts": 1,
+      "description": "Проведение внутренних работ, отделочные работы и проверка готовности объекта"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 1962.",
+  "rag_context_used": false
+}

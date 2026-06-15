@@ -1,0 +1,5 @@
+metric,N,mean_BARE,mean_STRUCTURED,mean_RAG,std_BARE,std_STRUCTURED,std_RAG,delta_struct_vs_bare,delta_rag_vs_struct,delta_rag_vs_bare,friedman_chi2,friedman_p,wilcoxon_p_struct_vs_bare,wilcoxon_p_rag_vs_struct,wilcoxon_p_rag_vs_bare,t_test_p_struct_vs_bare,t_test_p_rag_vs_struct,t_test_p_rag_vs_bare,cohen_dz_struct_vs_bare,cohen_dz_rag_vs_struct,cohen_dz_rag_vs_bare,friedman_significant_005
+C,15,0.518,0.842,0.893,0.045,0.134,0.014,0.324,0.051,0.376,21.96,0.0,0.0002,0.4235,0.0,0.0,0.0861,0.0,2.026,0.371,8.807,True
+S,15,0.993,0.9,0.97,0.018,0.127,0.035,-0.093,0.069,-0.023,7.957,0.0187,0.9983,0.0677,0.9635,0.9925,0.0447,0.9755,-0.716,0.471,-0.557,True
+D,15,0.615,0.589,0.694,0.141,0.132,0.097,-0.026,0.105,0.079,10.073,0.0065,0.7894,0.0075,0.0206,0.7363,0.0055,0.0292,-0.167,0.757,0.532,True
+Q,15,0.709,0.777,0.852,0.045,0.108,0.032,0.069,0.075,0.144,17.733,0.0001,0.024,0.0062,0.0,0.0111,0.0089,0.0,0.663,0.693,2.915,True

@@ -1,0 +1,123 @@
+{
+  "project_name": "10-этажный многофункциональный комплекс",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 45,
+      "depends_on": [],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Устройство железобетонного фундамента объемом 1900.0 м³"
+    },
+    {
+      "task_name": "Изготовление стен",
+      "duration_days": 60,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 30,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных стен объемом 2500.0 м³, газобетонных стен объемом 480.0 м³ и стеклянных стен объемом 180.0 м³"
+    },
+    {
+      "task_name": "Изготовление колонн",
+      "duration_days": 30,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 25,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных колонн объемом 360.0 м³"
+    },
+    {
+      "task_name": "Изготовление балок",
+      "duration_days": 20,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 1,
+      "description": "Устройство стальных балок объемом 110.0 м³"
+    },
+    {
+      "task_name": "Изготовление перекрытий",
+      "duration_days": 45,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 35,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных перекрытий объемом 5500.0 м³"
+    },
+    {
+      "task_name": "Изготовление крыши",
+      "duration_days": 20,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 10,
+      "work_shifts": 1,
+      "description": "Устройство металлической крыши объемом 55.0 м³"
+    },
+    {
+      "task_name": "Конструктивные работы",
+      "duration_days": 90,
+      "depends_on": [
+        "Изготовление фундамента",
+        "Изготовление стен",
+        "Изготовление колонн",
+        "Изготовление балок",
+        "Изготовление перекрытий",
+        "Изготовление крыши"
+      ],
+      "workers_required": 50,
+      "work_shifts": 1,
+      "description": "Завершение конструктивных работ"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 30,
+      "depends_on": [
+        "Конструктивные работы"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Установка алюминиевых окон объемом 0.0 м³"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 30,
+      "depends_on": [
+        "Конструктивные работы"
+      ],
+      "workers_required": 15,
+      "work_shifts": 1,
+      "description": "Установка стеклянных дверей объемом 0.0 м³"
+    },
+    {
+      "task_name": "Устройство лестниц",
+      "duration_days": 20,
+      "depends_on": [
+        "Конструктивные работы"
+      ],
+      "workers_required": 10,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных лестниц объемом 110.0 м³"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 60,
+      "depends_on": [
+        "Установка окон",
+        "Установка дверей",
+        "Устройство лестниц"
+      ],
+      "workers_required": 35,
+      "work_shifts": 1,
+      "description": "Заключительные отделочные и инженерные работы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2931.",
+  "rag_context_used": false
+}

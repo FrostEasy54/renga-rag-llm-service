@@ -1,0 +1,168 @@
+{
+  "project_name": "10-этажный многофункциональный комплекс",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Земляные работы и устройство фундамента",
+      "duration_days": 45,
+      "depends_on": [],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Выполнение земляных работ, устройство фундаментов"
+    },
+    {
+      "task_name": "Устройство стен",
+      "duration_days": 90,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 35,
+      "work_shifts": 2,
+      "description": "Монтаж железобетонных, газобетонных и стеклянных стен"
+    },
+    {
+      "task_name": "Устройство колонн",
+      "duration_days": 40,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 1,
+      "description": "Монтаж железобетонных колонн"
+    },
+    {
+      "task_name": "Устройство балок",
+      "duration_days": 30,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 10,
+      "work_shifts": 1,
+      "description": "Монтаж стальных балок"
+    },
+    {
+      "task_name": "Устройство перекрытий",
+      "duration_days": 60,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 25,
+      "work_shifts": 1,
+      "description": "Монтаж железобетонных перекрытий"
+    },
+    {
+      "task_name": "Устройство крыши",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство перекрытий"
+      ],
+      "workers_required": 15,
+      "work_shifts": 1,
+      "description": "Монтаж металлической крыши"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 20,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Установка алюминиевых окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 20,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Установка стеклянных дверей"
+    },
+    {
+      "task_name": "Устройство лестниц",
+      "duration_days": 20,
+      "depends_on": [
+        "Земляные работы и устройство фундамента"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Монтаж железобетонных лестничных клеток"
+    },
+    {
+      "task_name": "Внутренняя отделка",
+      "duration_days": 90,
+      "depends_on": [
+        "Устройство перекрытий"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Выполнение внутренней отделки помещений"
+    },
+    {
+      "task_name": "Электромонтажные работы",
+      "duration_days": 45,
+      "depends_on": [
+        "Устройство перекрытий"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Монтаж электропроводки и освещения"
+    },
+    {
+      "task_name": "Коммуникации",
+      "duration_days": 45,
+      "depends_on": [
+        "Устройство перекрытий"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Монтаж водопровода, канализации и отопления"
+    },
+    {
+      "task_name": "Комплектация помещений",
+      "duration_days": 60,
+      "depends_on": [
+        "Внутренняя отделка",
+        "Электромонтажные работы",
+        "Коммуникации"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Установка мебели, оборудования и других элементов"
+    },
+    {
+      "task_name": "Пусконаладочные работы",
+      "duration_days": 30,
+      "depends_on": [
+        "Комплектация помещений"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Выполнение пусконаладочных работ"
+    },
+    {
+      "task_name": "Завершающие работы",
+      "duration_days": 30,
+      "depends_on": [
+        "Пусконаладочные работы"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Очистка территории, оформление документов"
+    },
+    {
+      "task_name": "Ввод в эксплуатацию",
+      "duration_days": 30,
+      "depends_on": [
+        "Завершающие работы"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Подписание акта о приемке объекта"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2931.",
+  "rag_context_used": false
+}

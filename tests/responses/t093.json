@@ -1,0 +1,98 @@
+{
+  "project_name": "12-этажный монолитный МКД",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 45,
+      "depends_on": [],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Строительство стен",
+      "duration_days": 60,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных и газобетонных стен"
+    },
+    {
+      "task_name": "Монтаж колонн",
+      "duration_days": 15,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Установка железобетонных колонн"
+    },
+    {
+      "task_name": "Монтаж перекрытий",
+      "duration_days": 45,
+      "depends_on": [
+        "Строительство стен",
+        "Монтаж колонн"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных перекрытий"
+    },
+    {
+      "task_name": "Монтаж кровли",
+      "duration_days": 30,
+      "depends_on": [
+        "Монтаж перекрытий"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Устройство бетонной крыши"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 30,
+      "depends_on": [
+        "Монтаж кровли"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 30,
+      "depends_on": [
+        "Монтаж кровли"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Строительство лестниц",
+      "duration_days": 30,
+      "depends_on": [
+        "Монтаж кровли"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных лестничных клеток"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 60,
+      "depends_on": [
+        "Установка дверей",
+        "Строительство лестниц"
+      ],
+      "workers_required": 25,
+      "work_shifts": 1,
+      "description": "Проведение финальных работ, отделочные работы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 1203.",
+  "rag_context_used": false
+}

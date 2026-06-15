@@ -1,0 +1,146 @@
+{
+  "project_name": "Одноэтажный сельский медпункт",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Подготовка площадки",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Подготовка и ограждение строительной площадки, устройство временных сооружений и подключение временных коммуникаций, геодезическая разбивка осей здания"
+    },
+    {
+      "task_name": "Земляные работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Подготовка площадки"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Разработка котлована или траншей, устройство фундамента"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 10,
+      "depends_on": [
+        "Земляные работы"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство фундамента, гидроизоляция фундамента и обратная засыпка пазух котлована"
+    },
+    {
+      "task_name": "Возведение стен",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 12,
+      "work_shifts": 2,
+      "description": "Возведение стен 1-го этажа (несущие конструкции и перегородки)"
+    },
+    {
+      "task_name": "Устройство перекрытия",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение стен"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство перекрытия 1-го этажа (опирается на стены 1-го этажа)"
+    },
+    {
+      "task_name": "Кровельные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Устройство перекрытия"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение кровли (стропильная система или плиты покрытия + кровельный пирог)"
+    },
+    {
+      "task_name": "Монтаж окон и дверей",
+      "duration_days": 5,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Монтаж оконных и наружных дверных блоков"
+    },
+    {
+      "task_name": "Черновые инженерные сети",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство перекрытия"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Прокладка водопровода, канализации, стояков отопления и электрики"
+    },
+    {
+      "task_name": "Штукатурные работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Монтаж окон и дверей"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Штукатурка внутренних стен"
+    },
+    {
+      "task_name": "Устройство полов",
+      "duration_days": 5,
+      "depends_on": [
+        "Штукатурные работы"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство стяжки и напольного покрытия"
+    },
+    {
+      "task_name": "Малярные и обойные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Устройство полов"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Покраска стен, наклейка обоев"
+    },
+    {
+      "task_name": "Установка инженерного оборудования",
+      "duration_days": 5,
+      "depends_on": [
+        "Малярные и обойные работы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка радиаторов, сантехнических приборов, розеток, выключателей, светильников"
+    },
+    {
+      "task_name": "Отделка фасада",
+      "duration_days": 5,
+      "depends_on": [
+        "Монтаж окон и дверей"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Утепление и облицовка наружных стен"
+    },
+    {
+      "task_name": "Благоустройство территории",
+      "duration_days": 5,
+      "depends_on": [
+        "Отделка фасада"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Устройство отмостки, дорожек и озеленение"
+    }
+  ],
+  "notes": "Все этапы выполнены в соответствии с МДС 12-43.2008.",
+  "rag_context_used": false
+}

@@ -1,0 +1,106 @@
+{
+  "project_name": "5-этажный кирпичный МКД",
+  "total_duration_days": 180,
+  "tasks": [
+    {
+      "task_name": "Осадка и подготовка участка",
+      "duration_days": 7,
+      "depends_on": [],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Подготовка участка под строительство, осадка грунта"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 14,
+      "depends_on": [
+        "Осадка и подготовка участка"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Строительство стен",
+      "duration_days": 40,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Сборка кирпичных стен"
+    },
+    {
+      "task_name": "Установка колонн",
+      "duration_days": 7,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка железобетонных колонн"
+    },
+    {
+      "task_name": "Сборка перекрытий",
+      "duration_days": 14,
+      "depends_on": [
+        "Установка колонн"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Сборка бетонных перекрытий"
+    },
+    {
+      "task_name": "Строительство лестниц",
+      "duration_days": 7,
+      "depends_on": [
+        "Сборка перекрытий"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Сборка железобетонных лестничных клеток"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 14,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 7,
+      "depends_on": [
+        "Строительство стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Устройство кровли",
+      "duration_days": 14,
+      "depends_on": [
+        "Сборка перекрытий"
+      ],
+      "workers_required": 8,
+      "work_shifts": 2,
+      "description": "Устройство бетонной крыши"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 14,
+      "depends_on": [
+        "Устройство кровли"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Оштукатуривание, окраска, укладка напольных покрытий"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 218.",
+  "rag_context_used": false
+}

@@ -1,0 +1,86 @@
+{
+  "project_name": "Дачный одноэтажный дом",
+  "total_duration_days": 30,
+  "tasks": [
+    {
+      "task_name": "Планировка и подготовка участка",
+      "duration_days": 2,
+      "depends_on": [],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Определение границ строения, выравнивание территории"
+    },
+    {
+      "task_name": "Строительство фундамента",
+      "duration_days": 5,
+      "depends_on": [
+        "Планировка и подготовка участка"
+      ],
+      "workers_required": 6,
+      "work_shifts": 1,
+      "description": "Устройство бетонного фундамента"
+    },
+    {
+      "task_name": "Сборка стен",
+      "duration_days": 7,
+      "depends_on": [
+        "Строительство фундамента"
+      ],
+      "workers_required": 8,
+      "work_shifts": 1,
+      "description": "Установка бруса для стен"
+    },
+    {
+      "task_name": "Сборка пола",
+      "duration_days": 3,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Устройство деревянного пола"
+    },
+    {
+      "task_name": "Крепление крыши",
+      "duration_days": 4,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 6,
+      "work_shifts": 1,
+      "description": "Установка деревянной кровли"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 2,
+      "depends_on": [
+        "Крепление крыши"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 2,
+      "depends_on": [
+        "Крепление крыши"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка деревянных дверей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 2,
+      "depends_on": [
+        "Установка дверей"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Оштукатуривание, окраска, укладка напольного покрытия"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 29.",
+  "rag_context_used": false
+}

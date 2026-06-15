@@ -1,0 +1,87 @@
+{
+  "project_name": "Двухэтажный кирпичный коттедж",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Заложить фундамент",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 4,
+      "work_shifts": 8,
+      "description": "Установка железобетонного фундамента"
+    },
+    {
+      "task_name": "Сооружение стен",
+      "duration_days": 15,
+      "depends_on": [
+        "Заложить фундамент"
+      ],
+      "workers_required": 8,
+      "work_shifts": 8,
+      "description": "Кладка кирпичных стен"
+    },
+    {
+      "task_name": "Создание перекрытий",
+      "duration_days": 7,
+      "depends_on": [
+        "Сооружение стен"
+      ],
+      "workers_required": 6,
+      "work_shifts": 8,
+      "description": "Установка железобетонных перекрытий"
+    },
+    {
+      "task_name": "Кровельные работы",
+      "duration_days": 5,
+      "depends_on": [
+        "Создание перекрытий"
+      ],
+      "workers_required": 3,
+      "work_shifts": 8,
+      "description": "Установка деревянной крыши"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 4,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 8,
+      "description": "Установка пластиковых окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 3,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 8,
+      "description": "Установка деревянных дверей"
+    },
+    {
+      "task_name": "Создание лестницы",
+      "duration_days": 3,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 2,
+      "work_shifts": 8,
+      "description": "Установка железобетонной лестницы"
+    },
+    {
+      "task_name": "Завершающие работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Установка дверей",
+        "Создание лестницы"
+      ],
+      "workers_required": 4,
+      "work_shifts": 8,
+      "description": "Отделочные и мелкие строительные работы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 87.",
+  "rag_context_used": false
+}

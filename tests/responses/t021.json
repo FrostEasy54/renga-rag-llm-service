@@ -1,0 +1,76 @@
+{
+  "project_name": "Одноэтажный гаражный комплекс",
+  "total_duration_days": 60,
+  "tasks": [
+    {
+      "task_name": "Грунтовые работы и устройство фундамента",
+      "duration_days": 10,
+      "depends_on": [],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Очистка территории, выравнивание грунта, устройство опалубки и заливка фундамента"
+    },
+    {
+      "task_name": "Устройство колонн",
+      "duration_days": 5,
+      "depends_on": [
+        "Грунтовые работы и устройство фундамента"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Монтаж железобетонных колонн"
+    },
+    {
+      "task_name": "Устройство стен",
+      "duration_days": 20,
+      "depends_on": [
+        "Грунтовые работы и устройство фундамента"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Монтаж железобетонных стен"
+    },
+    {
+      "task_name": "Устройство пола",
+      "duration_days": 5,
+      "depends_on": [
+        "Грунтовые работы и устройство фундамента"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Заливка железобетонного пола"
+    },
+    {
+      "task_name": "Устройство крыши",
+      "duration_days": 5,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 4,
+      "work_shifts": 1,
+      "description": "Монтаж металлической кровли"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 2,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 2,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка металлических окон"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 35.",
+  "rag_context_used": false
+}

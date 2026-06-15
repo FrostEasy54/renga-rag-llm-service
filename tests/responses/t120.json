@@ -1,0 +1,99 @@
+{
+  "project_name": "17-этажный жилой комплекс",
+  "total_duration_days": 365,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 40,
+      "depends_on": [],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Устройство железобетонного фундамента"
+    },
+    {
+      "task_name": "Строительство стен",
+      "duration_days": 60,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 30,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных и кирпичных стен"
+    },
+    {
+      "task_name": "Строительство колонн",
+      "duration_days": 25,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 10,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных колонн"
+    },
+    {
+      "task_name": "Строительство перекрытий",
+      "duration_days": 50,
+      "depends_on": [
+        "Строительство стен",
+        "Строительство колонн"
+      ],
+      "workers_required": 20,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных перекрытий"
+    },
+    {
+      "task_name": "Крепление крыши",
+      "duration_days": 35,
+      "depends_on": [
+        "Строительство перекрытий"
+      ],
+      "workers_required": 10,
+      "work_shifts": 1,
+      "description": "Устройство бетонной крыши"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 25,
+      "depends_on": [
+        "Крепление крыши"
+      ],
+      "workers_required": 8,
+      "work_shifts": 1,
+      "description": "Установка ПВХ окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 20,
+      "depends_on": [
+        "Крепление крыши"
+      ],
+      "workers_required": 6,
+      "work_shifts": 1,
+      "description": "Установка металлических дверей"
+    },
+    {
+      "task_name": "Строительство лестниц",
+      "duration_days": 20,
+      "depends_on": [
+        "Крепление крыши"
+      ],
+      "workers_required": 5,
+      "work_shifts": 1,
+      "description": "Устройство железобетонных лестничных маршей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 40,
+      "depends_on": [
+        "Установка окон",
+        "Установка дверей",
+        "Строительство лестниц"
+      ],
+      "workers_required": 15,
+      "work_shifts": 1,
+      "description": "Проведение электромонтажных и сантехнических работ, отделочные работы"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 2267.",
+  "rag_context_used": false
+}

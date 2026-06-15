@@ -1,0 +1,119 @@
+{
+  "project_name": "3-этажная общеобразовательная школа",
+  "total_duration_days": 180,
+  "tasks": [
+    {
+      "task_name": "Осадка и подготовка участка",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Подготовка площадки под строительство, осадка почвы"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 15,
+      "depends_on": [
+        "Осадка и подготовка участка"
+      ],
+      "workers_required": 20,
+      "work_shifts": 3,
+      "description": "Монтаж железобетонных элементов фундамента"
+    },
+    {
+      "task_name": "Устройство стен",
+      "duration_days": 45,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 30,
+      "work_shifts": 2,
+      "description": "Монтаж железобетонных стен"
+    },
+    {
+      "task_name": "Устройство колонн",
+      "duration_days": 15,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 10,
+      "work_shifts": 2,
+      "description": "Монтаж железобетонных колонн"
+    },
+    {
+      "task_name": "Устройство балок",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 15,
+      "work_shifts": 2,
+      "description": "Монтаж железобетонных балок"
+    },
+    {
+      "task_name": "Устройство перекрытий",
+      "duration_days": 30,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 25,
+      "work_shifts": 2,
+      "description": "Монтаж железобетонных перекрытий"
+    },
+    {
+      "task_name": "Установка кровли",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка металлочерепицы на крышу"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка ПВХ-окон"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка деревянных дверей"
+    },
+    {
+      "task_name": "Устройство лестниц",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство стен"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Монтаж железобетонных лестничных маршей"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Установка кровли",
+        "Установка окон",
+        "Установка дверей",
+        "Устройство лестниц"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Проведение финальных работ, проверка готовности здания"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 341.",
+  "rag_context_used": false
+}

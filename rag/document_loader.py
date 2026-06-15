@@ -7,7 +7,6 @@ import pdfplumber
 
 @dataclass
 class DocumentChunk:
-    """A single text chunk ready for embedding and storage in ChromaDB."""
 
     text: str
     source: str
@@ -16,19 +15,6 @@ class DocumentChunk:
 
 
 class DocumentLoader:
-    """
-    Loads .pdf and .txt construction norm documents and splits them into chunks.
-
-    PDF extraction strategy:
-    - Tables are extracted separately and converted to readable text rows,
-      preserving the numeric data that pdfplumber mangles when tables and
-      prose are extracted together.
-    - Regular prose is extracted from the remaining page text after tables
-      are stripped out.
-
-    This matters for МДС/СП documents where the most valuable data
-    (durations, quantities) lives in tables.
-    """
 
     def __init__(
         self,
@@ -85,29 +71,13 @@ class DocumentLoader:
 
         return all_chunks
 
-    # ------------------------------------------------------------------
-    # Private helpers
-    # ------------------------------------------------------------------
-
     def _extract_text_from_pdf(self, path: Path) -> str:
-        """
-        Extract text from a PDF, handling tables and prose separately.
-
-        For each page:
-        - Tables are converted to clean pipe-separated rows so numeric
-          data (durations, floor counts) is preserved and readable.
-        - Prose text has table bounding boxes cropped out before extraction
-          so table content isn't duplicated as garbled text.
-
-        Pages are joined with double newlines to preserve paragraph structure.
-        """
         pages: list[str] = []
 
         with pdfplumber.open(path) as pdf:
             for page in pdf.pages:
                 page_parts: list[str] = []
 
-                # Extract tables first
                 tables = page.extract_tables()
                 table_bboxes = [t.bbox for t in page.find_tables()] if tables else []
 
@@ -116,14 +86,13 @@ class DocumentLoader:
                     if table_text:
                         page_parts.append(table_text)
 
-                # Crop out table areas from the page before extracting prose
-                # so we don't get the same data twice as mangled text
+
                 cropped_page = page
                 for bbox in table_bboxes:
                     try:
                         cropped_page = cropped_page.outside_bbox(bbox)
                     except Exception:
-                        pass  # if crop fails, fall back to full page text
+                        pass
 
                 prose = cropped_page.extract_text()
                 if prose and prose.strip():
@@ -136,25 +105,10 @@ class DocumentLoader:
 
     @staticmethod
     def _format_table(table: list[list]) -> str:
-        """
-        Convert a pdfplumber table into semantically rich sentences.
-
-        Plain pipe-separated rows embed poorly — ChromaDB sees
-        "Кирпичное | 6,5 | 1 | 3" with no idea what the numbers mean.
-        Instead we pair each data row with the detected header row and
-        produce full descriptions:
-
-            "Характеристика = Кирпичное и из мелких блоков; Общая = 6,5; Надземная часть = 3."
-
-        This gives the embedding model enough context to match a query like
-        "продолжительность строительства кирпичного 5-этажного здания".
-
-        Falls back to pipe-separated rows if no header can be detected.
-        """
         if not table:
             return ""
 
-        # Normalise all cells
+
         cleaned: list[list[str]] = []
         for row in table:
             if row is None:
@@ -166,7 +120,6 @@ class DocumentLoader:
         if not cleaned:
             return ""
 
-        # Detect header row — the first row where most cells are non-numeric
         def _is_header(row: list[str]) -> bool:
             non_empty = [c for c in row if c]
             if not non_empty:
@@ -183,11 +136,9 @@ class DocumentLoader:
         else:
             data_rows = cleaned
 
-        # If no header detected, fall back to pipe rows
         if not header:
             return "\n".join(" | ".join(row) for row in data_rows)
 
-        # Expand each data row into "header_col = value" sentences
         sentences: list[str] = []
         for row in data_rows:
             pairs: list[str] = []

@@ -1,0 +1,216 @@
+{
+  "project_name": "3-этажная общеобразовательная школа",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Подготовка и ограждение строительной площадки",
+      "duration_days": 5,
+      "depends_on": [],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Подготовка территории, установка ограждений"
+    },
+    {
+      "task_name": "Устройство временных сооружений и подключение временных коммуникаций",
+      "duration_days": 5,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Установка временных конструкций, подключение коммуникаций"
+    },
+    {
+      "task_name": "Геодезическая разбивка осей здания",
+      "duration_days": 3,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Разбивка границ и осей здания"
+    },
+    {
+      "task_name": "Земляные работы (разработка котлована)",
+      "duration_days": 7,
+      "depends_on": [
+        "Подготовка и ограждение строительной площадки"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Выемка грунта для фундамента"
+    },
+    {
+      "task_name": "Устройство фундамента",
+      "duration_days": 10,
+      "depends_on": [
+        "Земляные работы (разработка котлована)"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Создание основания для здания"
+    },
+    {
+      "task_name": "Гидроизоляция фундамента и обратная засыпка пазух котлована",
+      "duration_days": 5,
+      "depends_on": [
+        "Устройство фундамента"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Защита фундамента от влаги и обратная засыпка"
+    },
+    {
+      "task_name": "Возведение стен 1-го этажа",
+      "duration_days": 15,
+      "depends_on": [
+        "Гидроизоляция фундамента и обратная засыпка пазух котлована"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение несущих стен первого этажа"
+    },
+    {
+      "task_name": "Устройство перекрытия 1-го этажа",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение стен 1-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Положение перекрытия первого этажа"
+    },
+    {
+      "task_name": "Возведение стен 2-го этажа",
+      "duration_days": 15,
+      "depends_on": [
+        "Устройство перекрытия 1-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение несущих стен второго этажа"
+    },
+    {
+      "task_name": "Устройство перекрытия 2-го этажа",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение стен 2-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Положение перекрытия второго этажа"
+    },
+    {
+      "task_name": "Возведение стен 3-го этажа",
+      "duration_days": 15,
+      "depends_on": [
+        "Устройство перекрытия 2-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Возведение несущих стен третьего этажа"
+    },
+    {
+      "task_name": "Устройство перекрытия 3-го этажа",
+      "duration_days": 5,
+      "depends_on": [
+        "Возведение стен 3-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Положение перекрытия третьего этажа"
+    },
+    {
+      "task_name": "Кровельные работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство перекрытия 3-го этажа"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка кровли"
+    },
+    {
+      "task_name": "Монтаж оконных и наружных дверных блоков",
+      "duration_days": 10,
+      "depends_on": [
+        "Кровельные работы"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Установка окон и дверей"
+    },
+    {
+      "task_name": "Прокладка инженерных сетей, черновой этап",
+      "duration_days": 10,
+      "depends_on": [
+        "Монтаж оконных и наружных дверных блоков"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Прокладка водопровода, канализации, электрики"
+    },
+    {
+      "task_name": "Штукатурные работы (внутренние)",
+      "duration_days": 10,
+      "depends_on": [
+        "Монтаж оконных и наружных дверных блоков"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Штукатурка стен"
+    },
+    {
+      "task_name": "Устройство полов (стяжка, плитка, ламинат)",
+      "duration_days": 10,
+      "depends_on": [
+        "Штукатурные работы (внутренние)"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Укладка полов"
+    },
+    {
+      "task_name": "Малярные и обойные работы",
+      "duration_days": 10,
+      "depends_on": [
+        "Устройство полов (стяжка, плитка, ламинат)"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Покраска стен и установка обоев"
+    },
+    {
+      "task_name": "Установка инженерного оборудования, чистовой этап",
+      "duration_days": 10,
+      "depends_on": [
+        "Малярные и обойные работы"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Установка радиаторов, сантехники, розеток"
+    },
+    {
+      "task_name": "Отделка фасада",
+      "duration_days": 10,
+      "depends_on": [
+        "Монтаж оконных и наружных дверных блоков"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Утепление и отделка фасада"
+    },
+    {
+      "task_name": "Благоустройство территории",
+      "duration_days": 10,
+      "depends_on": [
+        "Отделка фасада"
+      ],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Озеленение, устройство дорожек"
+    }
+  ],
+  "notes": "Продолжительность строительства определена на основе норм МДС 12-43.2008 и учета типовых конструкций здания.",
+  "rag_context_used": true
+}

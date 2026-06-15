@@ -1,0 +1,86 @@
+{
+  "project_name": "Двухэтажный жилой дом из газобетона",
+  "total_duration_days": 120,
+  "tasks": [
+    {
+      "task_name": "Изготовление фундамента",
+      "duration_days": 7,
+      "depends_on": [],
+      "workers_required": 5,
+      "work_shifts": 2,
+      "description": "Устройство железобетонного фундамента объемом 21.0 м³"
+    },
+    {
+      "task_name": "Сборка стен",
+      "duration_days": 14,
+      "depends_on": [
+        "Изготовление фундамента"
+      ],
+      "workers_required": 8,
+      "work_shifts": 3,
+      "description": "Установка газобетонных стен объемом 98.0 м³"
+    },
+    {
+      "task_name": "Сборка перекрытий",
+      "duration_days": 10,
+      "depends_on": [
+        "Сборка стен"
+      ],
+      "workers_required": 6,
+      "work_shifts": 2,
+      "description": "Устройство железобетонных перекрытий объемом 44.0 м³"
+    },
+    {
+      "task_name": "Монтаж крыши",
+      "duration_days": 5,
+      "depends_on": [
+        "Сборка перекрытий"
+      ],
+      "workers_required": 3,
+      "work_shifts": 1,
+      "description": "Установка деревянной крыши объемом 11.0 м³"
+    },
+    {
+      "task_name": "Монтаж лестницы",
+      "duration_days": 4,
+      "depends_on": [
+        "Сборка перекрытий"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка железобетонной лестницы объемом 1.4 м³"
+    },
+    {
+      "task_name": "Установка окон",
+      "duration_days": 3,
+      "depends_on": [
+        "Монтаж крыши"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка ПВХ-окон объемом 0.0 м³"
+    },
+    {
+      "task_name": "Установка дверей",
+      "duration_days": 3,
+      "depends_on": [
+        "Монтаж крыши"
+      ],
+      "workers_required": 2,
+      "work_shifts": 1,
+      "description": "Установка ПВХ-дверей объемом 0.0 м³"
+    },
+    {
+      "task_name": "Заключительные работы",
+      "duration_days": 7,
+      "depends_on": [
+        "Установка дверей"
+      ],
+      "workers_required": 4,
+      "work_shifts": 2,
+      "description": "Отделочные работы, проверка и тестирование"
+    }
+  ],
+  "notes": "Экспортировано из Renga. Объектов в модели: 102.",
+  "rag_context_used": false
+}
